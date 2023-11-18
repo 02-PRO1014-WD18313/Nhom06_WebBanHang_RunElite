@@ -1,0 +1,402 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+body{
+  background: #dfe9f5;
+}
+.container{
+  display: flex;
+  
+} 
+
+/* logo  */
+
+.logo{
+  background:#eee;
+  text-align: center;
+  display: flex;
+  /* margin: 10px 10px 0 10px; */
+  height: 100px;
+  padding: 10px;
+}
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 15px;
+}
+.logo span{
+  font-weight: bold;
+  /* padding-left: 15px; */
+  font-size: 18px;
+  text-transform: uppercase;
+margin: 30px 0px 0px 10px;
+}
+
+/* =============side-bar===============  */
+
+.side-bar{
+  height: 100vh;
+  background: #fff;
+  width: 280px;
+  /* overflow: hidden; */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+/*============= test=========== */
+.side-bar::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Add transition for smooth hiding/showing of scrollbar */
+.side-bar {
+  transition: overflow 0.5s;
+}
+
+/* Show scrollbar when hovering */
+.side-bar:hover {
+  overflow-y: auto; /* Show the scrollbar on hover */
+}
+/* ======================================== */
+.icon{
+  font-size: 27px;
+ padding-top: 1px;
+}
+.side-bar .menu{
+  width: 100%;
+  margin-top: 30px;
+ }
+ 
+ .side-bar .menu .item{
+  position: relative;
+  /* cursor: pointer; */
+ }
+ 
+ .side-bar .menu .item a{
+ 
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 60px;
+ }
+ 
+ .side-bar .menu .item a:hover{
+  cursor:default;
+  /* background: #34AF6D; */
+  transition: 0.3s ease;
+ }
+ 
+ .side-bar .menu .item i{
+  margin-right: 20px;
+ }
+ 
+ .side-bar .menu .item a .dropdown{
+
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  transition: 0.3s ease;
+ }
+ 
+ .side-bar .menu .item .sub-menu{
+ 
+  display: none;
+ }
+ 
+ .side-bar .menu .item .sub-menu a{
+  color: black;
+  padding-left: 70px;
+transition: all 0.2s ease-in;
+border-radius: 0.5rem;
+ }
+ .side-bar .menu .item .sub-menu a:hover{
+  cursor: pointer;
+  background: #34AF6D;
+ }
+ .rotate{
+  transform: rotate(90deg);
+ }
+ /* logout  */
+ .side-bar .logout {
+  margin: 100px 10px 10px 10px;
+}
+
+.side-bar .logout a {
+  color: #333; /* Màu chữ cho phần đăng xuất */
+  display: block;
+  padding: 5px 30px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.side-bar .logout a span{
+  margin-left: 15px;
+  transition: 0.3s ease;
+}
+.side-bar .logout a i{
+  transition: 0.3s ease;
+
+}
+.side-bar .logout a:hover span{
+  font-size: 18px;
+
+}
+.side-bar .logout a:hover i{
+  font-size: 30px;
+}
+
+
+/* Main Section */
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+ .attendance{
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.attendance-list{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  color: #fff;
+  background: #34AF6D;
+  text-align: left;
+  font-weight: bold;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+  width: 27%;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+.table tbody tr.active{
+  font-weight: bold;
+  color: #4AD489;
+}
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid #4AD489;
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+.table button:hover{
+  background: #4AD489;
+  color: #fff;
+  transition: 0.5rem;
+}
+/* login & register*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    column-gap: 30px;
+    float: left;
+
+}
+
+
+.form{
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: #f5f5f5;
+
+    
+}
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+
+}
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+    
+}
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+    float: left;
+}
+header{
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(53, 184, 64);
+    text-align: center;
+
+}
+form{
+    margin-top: 30px;
+}
+.form .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.field input,
+.field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.field input{
+    outline: none;
+    padding: 0 10px;
+    border: 1px solid#CACACA;
+}
+.field input:focus{
+    border-bottom-width: 2px;
+}
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+.field button{
+    color: #fff;
+    background-color: #01d344;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.field button:hover{
+    background-color: #01cb0e;
+}
+.form-link{
+    text-align: center;
+    margin-top: 25px;
+}
+.form-link span,
+.form-link a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+}
+.form a{
+    color: #030303;
+    text-decoration: none;
+}
+.form-content a:hover{
+    text-decoration: underline;
+}
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+.line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #8b8b8b;
+    padding: 0 15px;
+}
+.media-options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a.facebook{
+    color: #fff;
+    background-color: #425ab2;
+}
+a.facebook .facebook-icon{
+    height: 28px;
+    width: 28px;
+    color: #0151d3;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.facebook-icon,
+img.google-img{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+img.google-img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+a.google{
+    border: 1px solid #CACACA;
+}
+a.google span{
+    font-weight: 500;
+    opacity: 0.6;
+    color: #232836;
+}
+
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 20px 10px;
+    }
+    
+}

@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.container-login{
+    width: 100%;
+    background-color: #f4f4f4;
+    height: 620px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+h1{
+    text-align: center;
+}
+.form{
+    width: 410px;
+    height: 600px;
+    background-color: #fff; 
+}
+.login-image{
+    width: 450px;
+    height: 600px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-image img{
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+}
+.form-content {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.form-content h2{
+    color: #0dba82;
+    font-size: 30px;
+}
+.form-content h1{
+    color: #0dba82;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.field{
+    margin-top:10px;
+    position: relative;
+}
+.field input{
+    width: 350px;
+    height: 36px;
+    padding-left:10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.bx{
+    position: absolute;
+    top:40px;
+    right: 40px;
+}
+.form-link{
+    margin-top: 15px;
+
+}
+.form-link a{
+    text-decoration: none;
+    color: black;
+    padding-left: 85px;
+}
+
+.button-login input{
+ 
+    margin-top: 20px;
+    height: 34px;
+    width: 350px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0db5a3;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.or{
+    color: #3d3a3a;
+    text-align: center;
+    margin: 15px 0;
+    width: 360px;
+}
+.mxh {
+    width: 360px;
+}
+.mxh button{
+    width: 49%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}
+.mxh button:nth-child(1){
+    background-color: #39599b;
+    color: #fff;
+}
+.mxh button:nth-child(2){
+    background-color: #d9281f;
+    color: #fff;
+}
+.mxh i{
+    margin-right: 10px;
+}
+.form-register{
+    margin-top:11px;
+    color:#0db5a3;
+ width: 100%;
+    text-align: center;
+}
+.form-register a{
+    color: #0db5a3;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+  

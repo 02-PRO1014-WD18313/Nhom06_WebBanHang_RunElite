@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+  </head>
+  <body>
+    <div class="container">
+   <div class="side-bar">
+            <div  class="logo">
+            <img src="image/admin.jpg" alt="">
+            <span>Admin</span>
+          </div>
+          <div class="menu">
+<!-- danh mục  -->
+            <div class="item">
+              <a class="sub-btn"><i class="fa-solid fa-layer-group icon"></i>Danh Mục<i class="fa-solid fa-chevron-right dropdown"></i> </a>
+              <div class="sub-menu">
+                <a href="#" class="sub-item">Sub Item 01</a>
+                <a href="#" class="sub-item">Sub Item 02</a>
+                <a href="#" class="sub-item">Sub Item 03</a>
+              </div>
+            </div>
+        <!-- sản phẩm  -->
+            <div class="item">
+              <a class="sub-btn"><i class="fa-solid fa-gift icon"></i>Sản Phẩm<i class="fa-solid fa-chevron-right dropdown"></i> 
+              <div class="sub-menu">
+                <a href="#" class="sub-item">Sub Item 01</a>
+                <a href="#" class="sub-item">Sub Item 02</a>
+              </div>
+            </div>
+           
+         <!-- tài khoản  -->
+         <div class="item">
+          <a class="sub-btn"><i class="fas fa-user-cog icon"></i> Tài Khoản<i class="fa-solid fa-chevron-right dropdown"></i> 
+          <div class="sub-menu">
+            <a href="#" class="sub-item">Sub Item 01</a>
+            <a href="#" class="sub-item">Sub Item 02</a>
+          </div>
+        </div>
+
+        <!-- Đánh Giá -->
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-star-half-alt icon"></i>Đánh Giá<i class="fa-solid fa-chevron-right dropdown"></i> 
+          <div class="sub-menu">
+            <a href="#" class="sub-item">Sub Item 01</a>
+            <a href="#" class="sub-item">Sub Item 02</a>
+          </div>
+        </div>
+
+        <!-- Đơn Hàng  -->
+        <div class="item">
+          <a class="sub-btn"><i class="fa-solid fa-truck-fast icon"></i>Đơn Hàng<i class="fa-solid fa-chevron-right dropdown"></i> 
+          <div class="sub-menu">
+            <a href="#" class="sub-item">Sub Item 01</a>
+            <a href="#" class="sub-item">Sub Item 02</a>
+          </div>
+        </div>
+
+        <!-- Thống Kê -->
+        <div class="item">
+          <a class="sub-btn"><i class="fa-solid fa-chart-simple icon"></i>Thống Kê<i class="fa-solid fa-chevron-right dropdown"></i> 
+          <div class="sub-menu">
+            <a href="#" class="sub-item">Sub Item 01</a>
+            <a href="#" class="sub-item">Sub Item 02</a>
+          </div>
+          
+        </div>
+           <!-- đăng xuất  -->
+           <div class="logout">
+            <a href="#">
+              <i class="fas fa-sign-out-alt icon"></i>
+              <span class="">Đăng Xuất</span>
+            </a>
+          </div>
+          </div>
+   </div>
+
+      <section class="main">
+       <!-- content  -->
+       <section class="attendance">
+        <div class="attendance-list">
+          <h1>Danh Mục</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tên Danh Mục</th>
+               
+                <th >Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Sam David</td>
+             
+                <td><button>Sửa</button><button>Xóa</button></td>
+              </tr>
+              <tr class="active">
+                <td>02</td>
+                <td>Balbina Kherr</td>
+               
+                <td><button>Sửa</button><button>Xóa</button></td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>Badan John</td>
+              
+                <td><button>Sửa</button><button>Xóa</button></td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>Sara David</td>
+             
+                <td><button>Sửa</button><button>Xóa</button></td>
+              </tr>
+          
+            
+            </tbody>
+           
+          </table>
+         
+        </div>
+      </section>
+      </section>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // plain JavaScript for toggle sub menus
+      var subBtns = document.querySelectorAll('.sub-btn');
+  
+      subBtns.forEach(function(subBtn) {
+        subBtn.addEventListener('click', function() {
+          var subMenu = this.nextElementSibling;
+  
+          if (subMenu.style.display === 'block') {
+            subMenu.style.display = 'none';
+          } else {
+            subMenu.style.display = 'block';
+          }
+  
+          var dropdownIcon = this.querySelector('.dropdown');
+          dropdownIcon.classList.toggle('rotate');
+        });
+      });
+    });
+  </script>
+  </html>
