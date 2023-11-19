@@ -1,7 +1,7 @@
 <?php
 session_start();
-include "C:/xampp/htdocs/duan1/123aaa/model/pdo.php";
-include "C:/xampp/htdocs/duan1/123aaa/model/taikhoan.php";
+include "model/pdo.php";
+include "model/taikhoan.php";
 
 include "view/header.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {

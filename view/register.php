@@ -28,7 +28,7 @@
                 </div>
 
 
-                <!-- THÔNG BÁO LỖI TRÙNG USERNAME, CSS LẠI CHO HỢP LÝ NHÉ! -->
+               
                 <span style="color: red;"><?php echo isset($thongbaoerr) ? $thongbaoerr : "" ?></span>
 
 

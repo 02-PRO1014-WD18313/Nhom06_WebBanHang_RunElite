@@ -45,7 +45,7 @@
           <?php
           if (isset($_SESSION['user'])) {
             extract($_SESSION['user']); ?>
-            <a href=""><?php echo $username; ?></a>
+            <a href="">Xin chào : <?php echo $username; ?> !</a>
             <?php if ($role == 0) { ?>
               <ul class="menu2-1">
                 <li>
