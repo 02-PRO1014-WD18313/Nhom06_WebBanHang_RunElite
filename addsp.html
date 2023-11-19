@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/addpro.css">
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="side-bar">
+      <div class="logo">
+        <img src="image/admin.jpg" alt="">
+        <span>Admin</span>
+      </div>
+      <div class="menu">
+        <!-- danh mục  -->
+        <div class="item">
+          <a class="sub-btn"><i class="fa-solid fa-layer-group icon"></i>Danh Mục<i
+              class="fa-solid fa-chevron-right dropdown"></i> </a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item">Sub Item 01</a>
+            <a href="#" class="sub-item">Sub Item 02</a>
+            <a href="#" class="sub-item">Sub Item 03</a>
+          </div>
+        </div>
+        <!-- sản phẩm  -->
+        <div class="item">
+          <a class="sub-btn"><i class="fa-solid fa-gift icon"></i>Sản Phẩm<i
+              class="fa-solid fa-chevron-right dropdown"></i>
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Sub Item 01</a>
+              <a href="#" class="sub-item">Sub Item 02</a>
+            </div>
+        </div>
+
+        <!-- tài khoản  -->
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-user-cog icon"></i> Tài Khoản<i
+              class="fa-solid fa-chevron-right dropdown"></i>
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Sub Item 01</a>
+              <a href="#" class="sub-item">Sub Item 02</a>
+            </div>
+        </div>
+
+        <!-- Đánh Giá -->
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-star-half-alt icon"></i>Đánh Giá<i
+              class="fa-solid fa-chevron-right dropdown"></i>
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Sub Item 01</a>
+              <a href="#" class="sub-item">Sub Item 02</a>
+            </div>
+        </div>
+
+        <!-- Đơn Hàng  -->
+        <div class="item">
+          <a class="sub-btn"><i class="fa-solid fa-truck-fast icon"></i>Đơn Hàng<i
+              class="fa-solid fa-chevron-right dropdown"></i>
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Sub Item 01</a>
+              <a href="#" class="sub-item">Sub Item 02</a>
+            </div>
+        </div>
+
+        <!-- Thống Kê -->
+        <div class="item">
+          <a class="sub-btn"><i class="fa-solid fa-chart-simple icon"></i>Thống Kê<i
+              class="fa-solid fa-chevron-right dropdown"></i>
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Sub Item 01</a>
+              <a href="#" class="sub-item">Sub Item 02</a>
+            </div>
+
+        </div>
+        <!-- đăng xuất  -->
+        <div class="logout">
+          <a href="#">
+            <i class="fas fa-sign-out-alt icon"></i>
+            <span class="">Đăng Xuất</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-addProduct">
+      <div class="addProduct-header">
+        <h1>Thêm sản phẩm </h1>
+      </div>
+      <div class="add-product">
+        <form action="index.php?act=addsp" method="POST" enctype="multipart/form-data">
+          <div class="box-dm">
+            Danh mục:
+            <select name="iddm" >
+              <option value="">Adidas</option>;
+              <option value="">Nike</option>
+              <option value="">MLB</option>
+            </select>
+
+            <div class="input-nameProduct">
+              <label for="">Nhập tên sản phẩm : </label>
+              <input  type="text" name="tensp">
+            </div>
+          </div>
+    
+          <div class="price-product">
+            <div class="price-noSale">
+              <label for="">Giá sản phẩm :</label>
+              <input class="add-input" type="number" name="giasp" step="1000" >
+            </div>
+
+            <div class="price-Sale">
+              <label for="">Giá Sale :</label>
+              <input class="add-input" type="number" name="giasp" step="1000" >
+            </div>
+          </div>
+          
+          <div class="image-product">
+            Ảnh: <input type="file" name="image">
+          </div>
+          <div class="mota-product">
+            Mô tả <br>
+            <textarea name="mota" cols="30" rows="10"></textarea>
+          </div>
+
+
+          <div class="product-submit">
+            <input class="button" type="submit" name="themmoi" value="Thêm Mới">
+            <input class="button" type="reset" value="Nhập Lại">
+            <button class="button"><a href="#">Danh sách sản phẩm</a></button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // plain JavaScript for toggle sub menus
+    var subBtns = document.querySelectorAll('.sub-btn');
+
+    subBtns.forEach(function (subBtn) {
+      subBtn.addEventListener('click', function () {
+        var subMenu = this.nextElementSibling;
+
+        if (subMenu.style.display === 'block') {
+          subMenu.style.display = 'none';
+        } else {
+          subMenu.style.display = 'block';
+        }
+
+        var dropdownIcon = this.querySelector('.dropdown');
+        dropdownIcon.classList.toggle('rotate');
+      });
+    });
+  });
+</script>
+
+</html>

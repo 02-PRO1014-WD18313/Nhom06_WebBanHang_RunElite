@@ -1,0 +1,84 @@
+.container-addProduct{
+    width: 75%;
+    background-color: #fff;
+    margin: 30px auto;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
+
+
+}
+.addProduct-header{
+    color: #0db5a3;
+    border-bottom:3px solid #0db5a3;
+    margin: 10px 10px 0 10px;
+    padding-bottom: 5px;
+}
+.add-product{
+    margin: 10px 10px 0 10px;   
+    font-size: 18px;
+    margin-top: 30px;
+    
+}
+.box-dm{
+    display: flex;
+}
+.box-dm option, .box-dm select {
+    font-size: 16px;
+    width:120px;
+    text-align: center;
+
+}
+.box-dm select{
+    border-radius: 5px;
+}
+.input-nameProduct{
+    margin-left: 90px;
+}
+.input-nameProduct input{
+    height: 26px;
+    border-radius: 5px;
+    width: 240px;
+    padding:2px 5px;
+    font-size: 16px;
+
+}
+.price-product{
+    display: flex;
+    margin-top: 20px;
+}
+.price-product input{
+    height: 26px;
+    border-radius: 5px;
+    width: 140px;
+    padding:2px 5px;
+    font-size: 16px;
+}
+.price-Sale{
+    margin-left: 30px;
+}
+.image-product,.mota-product{
+    margin-top: 20px;
+}
+.mota-product textarea{
+    width: 720px;
+    height: 150px;
+    font-size: 16px;
+}
+.product-submit{
+    margin-top: 20px;
+    width: 720px;
+    text-align: center;
+}
+.product-submit input, .product-submit button{
+    padding:5px 12px;
+    background-color: #0db5a3;
+    border: none;
+    border-radius: 10px;
+    color:black;
+    font-size: 16px;
+}
+.product-submit input:hover{
+    cursor: pointer;
+}
+.product-submit button a{
+    color:black;
+}
