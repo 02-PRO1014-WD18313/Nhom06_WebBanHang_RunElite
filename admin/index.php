@@ -71,10 +71,47 @@
                     }
                 }
                 break;
+case "listdm":
+   $listdm= loadall_danhmuc();
+    include "danhmuc/list.php";
 
+break;
+case "adddm":
+    if(isset($_POST['add_dm'])&&($_POST['add_dm'])){
+        $tendm=$_POST['ten_dm'];
+        insert_danhmuc($tendm);
+        $thongbao="Thêm thành công";
+    }
+    include "danhmuc/add.php";
+    break;
+case "suadm":
+    if (isset($_GET['id']) && ($_GET['id']) > 0){
+        $sql = "select * from category where id_category=" . $_GET['id'];
+        $dm=pdo_query_one($sql);
 
-
-
+    }
+    
+    include "danhmuc/update.php";
+    break;
+    case "updatedm":
+        if(isset($_POST['update_dm'])&&($_POST['update_dm'])){
+            $tendm=$_POST['ten_dm']; 
+            $id=$_POST['id_category'];
+            update_dm($tendm,$id);
+            $thongbao="Cập Nhật Thành Công";
+        }
+        $listdm= loadall_danhmuc();
+include "danhmuc/list.php";
+break;
+case "xoadm":
+    if (isset($_GET['id']) && ($_GET['id']) > 0){
+        $id =$_GET['id'] ;
+        xoa_dm($id);
+        
+    }
+    $listdm= loadall_danhmuc();
+    include "danhmuc/list.php";
+    break;
         }
     }else{
         include "danhmuc.php";
