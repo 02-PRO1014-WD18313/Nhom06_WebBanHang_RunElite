@@ -24,15 +24,15 @@
           <a class="sub-btn"><i class="fa-solid fa-layer-group icon"></i>Danh Mục<i
               class="fa-solid fa-chevron-right dropdown"></i> </a>
           <div class="sub-menu">
-            <a href="#" class="sub-item">Sub Item 01</a>
-            <a href="#" class="sub-item">Sub Item 02</a>
-            <a href="#" class="sub-item">Sub Item 03</a>
+            <a href="index.php?act=listdm" class="sub-item">Danh Sách</a>
+            <a href="#" class="sub-item">Thêm Danh Mục</a>
+          
           </div>
         </div>
         <!-- sản phẩm  -->
         <div class="item">
           <a class="sub-btn"><i class="fa-solid fa-gift icon"></i>Sản Phẩm<i
-              class="fa-solid fa-chevron-right dropdown"></i>
+              class="fa-solid fa-chevron-right dropdown"></i></a>
             <div class="sub-menu">
               <a href="index.php?act=addsp" class="sub-item">Thêm sản phẩm</a>
               <a href="index.php?act=listsp" class="sub-item">danh sách</a>
@@ -43,18 +43,17 @@
 
         <!-- tài khoản  -->
         <div class="item">
-          <a class="sub-btn"><i class="fas fa-user-cog icon"></i> Tài Khoản<i
-              class="fa-solid fa-chevron-right dropdown"></i>
-            <div class="sub-menu">
-              <a href="#" class="sub-item">Sub Item 01</a>
-              <a href="#" class="sub-item">Sub Item 02</a>
-            </div>
+          <a class="sub-btn"><i class="fas fa-user-cog icon"></i> Tài Khoản<i class="fa-solid fa-chevron-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item">Sub Item 01</a>
+            <a href="#" class="sub-item">Sub Item 02</a>
+          </div>
         </div>
 
         <!-- Đánh Giá -->
         <div class="item">
           <a class="sub-btn"><i class="fas fa-star-half-alt icon"></i>Đánh Giá<i
-              class="fa-solid fa-chevron-right dropdown"></i>
+              class="fa-solid fa-chevron-right dropdown"></i></a>
             <div class="sub-menu">
               <a href="#" class="sub-item">Sub Item 01</a>
               <a href="#" class="sub-item">Sub Item 02</a>
@@ -64,7 +63,7 @@
         <!-- Đơn Hàng  -->
         <div class="item">
           <a class="sub-btn"><i class="fa-solid fa-truck-fast icon"></i>Đơn Hàng<i
-              class="fa-solid fa-chevron-right dropdown"></i>
+              class="fa-solid fa-chevron-right dropdown"></i></a>
             <div class="sub-menu">
               <a href="#" class="sub-item">Sub Item 01</a>
               <a href="#" class="sub-item">Sub Item 02</a>
@@ -74,7 +73,7 @@
         <!-- Thống Kê -->
         <div class="item">
           <a class="sub-btn"><i class="fa-solid fa-chart-simple icon"></i>Thống Kê<i
-              class="fa-solid fa-chevron-right dropdown"></i>
+              class="fa-solid fa-chevron-right dropdown"></i></a>
             <div class="sub-menu">
               <a href="#" class="sub-item">Sub Item 01</a>
               <a href="#" class="sub-item">Sub Item 02</a>
@@ -83,9 +82,9 @@
         </div>
         <!-- đăng xuất  -->
         <div class="logout">
-          <a href="#">
+          < href="#">
             <i class="fas fa-sign-out-alt icon"></i>
-            <span class="">Đăng Xuất</span>
+            <span class="">Đăng Xuất</span></a>
           </a>
         </div>
       </div>
