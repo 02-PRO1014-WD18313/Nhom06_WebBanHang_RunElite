@@ -34,7 +34,7 @@
           </div>
 
           <div class="brand">
-            <a href="#">
+            <a href="index.php?act=product_category&id_category=1">
               <div class="brand-circle">
                 <div class="brand-image">          
                   <img src="image/adidaspng.png" alt="">
@@ -45,7 +45,7 @@
           </div>
 
           <div class="brand">
-            <a href="#">
+            <a href="index.php?act=product_category&id_category=2">
               <div class="brand-circle">
                 <div class="brand-image">          
                   <img src="image/nike.png" alt="">
@@ -56,7 +56,7 @@
           </div>
 
           <div class="brand">
-            <a href="#">
+            <a href="index.php?act=product_category&id_category=4">
               <div class="brand-circle">
                 <div class="brand-image">          
                   <img src="image/conv.png" alt="">
@@ -67,7 +67,7 @@
           </div>
 
           <div class="brand">
-            <a href="#">
+            <a href="index.php?act=product_category&id_category=7">
               <div class="brand-circle">
                 <div class="brand-image">          
                   <img src="image/lv.png" alt="">
@@ -78,7 +78,7 @@
           </div>
 
           <div class="brand">
-            <a href="#">
+            <a href="index.php?act=product_category&id_category=3">
               <div class="brand-circle">
                 <div class="brand-image">          
                   <img src="image/vans.png" alt="">
@@ -89,7 +89,7 @@
           </div>
 
           <div class="brand">
-            <a href="#">
+            <a href="index.php?act=product_category&id_category=5">
               <div class="brand-circle">
                 <div class="brand-image">          
                   <img src="image/mlb.png" alt="">
@@ -261,7 +261,7 @@
 
         <!-- ADIDAS -->
         <div class="adidas">
-          <h1> Giày Adidas</h1>
+          <h1><a href="index.php?act=product_category&id_category=1">Giày Adidas</a> </h1>
           <div class="adidas-product">
             <div class="product-box">
               <div class="product-image-container">
@@ -393,7 +393,7 @@
 
         <!-- NIKE  -->
         <div class="adidas">
-          <h1> Giày Nike</h1>
+          <h1><a href="index.php?act=product_category&id_category=2">Giày Nike</a></h1>
           <div class="adidas-product">
             <div class="product-box">
               <div class="product-image-container">
@@ -522,7 +522,7 @@
         <!-- MLB  -->
 
         <div class="adidas">
-          <h1> Giày MLB</h1>
+          <h1><a href="index.php?act=product_category&id_category=5"> Giày MLB</a></h1>
           <div class="adidas-product">
             <div class="product-box">
               <div class="product-image-container">

@@ -9,6 +9,12 @@ function delete_sanpham($id)
     $sql = "delete from product where id_product =" . $id;
     pdo_execute($sql);
 }
+function load_all_product(){
+    $sql = "select * from product where 1";
+    $listsp=pdo_query($sql);
+    return $listsp;
+
+}
 function loadall_sanpham($keyw = "", $iddm = 0)
 {
     $sql = "select * from product where 1";

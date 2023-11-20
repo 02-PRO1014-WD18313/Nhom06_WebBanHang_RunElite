@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Elite</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="image/runelite-removebg.png">
+    <link rel="stylesheet" href="css/loadproduct.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+</head>
+<style>
+    .container-allsp {
+        width: 1280px;
+        margin: 0px auto;
+        display: flex;
+    }
+
+    .sidebar {
+        width: 220px;
+
+        transition: 0.5s;
+        display: block;
+        height: fit-content;
+        margin-top: 20px;
+
+    }
+
+    .sidebar-category {
+        border-radius: 8px;
+    }
+
+    .sidebar li {
+        padding: 6px 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        /* display: block; */
+        transition: 0.3s;
+        background-color: #fff;
+
+
+    }
+
+    .sidebar a:hover {
+        color: #0db5a3;
+        /* font-weight: 600; */
+    }
+
+    .sidebar h2 {
+        padding: 8px 12px;
+        color: white;
+        text-align: center;
+        background-color: #0db5a3;
+        border-radius: 5px 5px 0 0;
+
+    }
+
+    .main-content {
+        width: 1060px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-content>.product-box {
+        margin-left: 35px;
+        margin-top: 20px;
+    }
+
+    .boxtt {
+        margin-top: 30px;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        /* box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.5); */
+
+    }
+
+    .boxtt h5 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .boxtt h3 {
+        color: red;
+        padding: 6px 0;
+    }
+
+    .boxtt p {
+        font-size: 14px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- BIGIN HEADER -->
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-logo">
+                <a href=""><img src="image/runelite-removebg.png" alt=""></a>
+
+            </div>
+
+            <div class="box_search">
+                <form action="" method="POST">
+                    <input type="text" placeholder="Từ khóa tìm kiếm" name="keyword">
+                    <button name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Sản Phẩm</a></li>
+                    <li class="nav2">
+                        <a href="">My Order <i class="fa-regular fa-heart"></i></a>
+                    </li>
+                    <li>
+                        <a href="">My Cart <i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <button class="menu2"><a href="">Đăng nhập</a></button>
+                </ul>
+            </div>
+        </div>
+        <!-- END HEADER -->
+
+        <div class="container-allsp ">
+            <div class="sidebar">
+                <div class="sidebar-category">
+                    <div>
+                        <h2>Categories</h2>
+                    </div>
+                    <ul>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Food</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Sports</a></li>
+                    </ul>
+                </div>
+
+                <div class="boxtt">
+                    <h5>Thông tin đặt hàng</h5>
+                    <h3>0999.999.999</h3>
+                    <p>(Zalo, 7h-23h cả Thứ 7,CN)</p>
+                </div>
+
+            </div>
+
+
+            <div class="main-content">
+                <div class="product-box">
+                    <div class="product-image-container">
+                        <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
+                        <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
+                    </div>
+                    <div class="product-sale">Yêu thích</div>
+                    <div class="product-detail">
+                        <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam
+                                nữ</a></div>
+                        <div class="product-price">2.000.000 VND</div>
+                        <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
+                        <div class="buy-now"><a href="">Mua Ngay</a></div>
+                        <div class="box-viewStar">
+                            <div class="view-count">Lượt xem: 1000</div>
+                            <div class="product-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-box">
+                    <div class="product-image-container">
+                        <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
+                        <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
+                    </div>
+                    <div class="product-sale">Yêu thích</div>
+                    <div class="product-detail">
+                        <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam
+                                nữ</a></div>
+                        <div class="product-price">2.000.000 VND</div>
+                        <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
+                        <div class="buy-now"><a href="">Mua Ngay</a></div>
+                        <div class="box-viewStar">
+                            <div class="view-count">Lượt xem: 1000</div>
+                            <div class="product-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-box">
+                    <div class="product-image-container">
+                        <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
+                        <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
+                    </div>
+                    <div class="product-sale">Yêu thích</div>
+                    <div class="product-detail">
+                        <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam
+                                nữ</a></div>
+                        <div class="product-price">2.000.000 VND</div>
+                        <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
+                        <div class="buy-now"><a href="">Mua Ngay</a></div>
+                        <div class="box-viewStar">
+                            <div class="view-count">Lượt xem: 1000</div>
+                            <div class="product-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-box">
+                    <div class="product-image-container">
+                        <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
+                        <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
+                    </div>
+                    <div class="product-sale">Yêu thích</div>
+                    <div class="product-detail">
+                        <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam
+                                nữ</a></div>
+                        <div class="product-price">2.000.000 VND</div>
+                        <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
+                        <div class="buy-now"><a href="">Mua Ngay</a></div>
+                        <div class="box-viewStar">
+                            <div class="view-count">Lượt xem: 1000</div>
+                            <div class="product-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-box">
+                    <div class="product-image-container">
+                        <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
+                        <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
+                    </div>
+                    <div class="product-sale">Yêu thích</div>
+                    <div class="product-detail">
+                        <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam
+                                nữ</a></div>
+                        <div class="product-price">2.000.000 VND</div>
+                        <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
+                        <div class="buy-now"><a href="">Mua Ngay</a></div>
+                        <div class="box-viewStar">
+                            <div class="view-count">Lượt xem: 1000</div>
+                            <div class="product-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-box">
+                    <div class="product-image-container">
+                        <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
+                        <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
+                    </div>
+                    <div class="product-sale">Yêu thích</div>
+                    <div class="product-detail">
+                        <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam
+                                nữ</a></div>
+                        <div class="product-price">2.000.000 VND</div>
+                        <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
+                        <div class="buy-now"><a href="">Mua Ngay</a></div>
+                        <div class="box-viewStar">
+                            <div class="view-count">Lượt xem: 1000</div>
+                            <div class="product-star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <script src="JS/main.js"></script>
+</body>
+
+
+</html>

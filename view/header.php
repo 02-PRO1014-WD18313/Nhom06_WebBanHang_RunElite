@@ -7,6 +7,7 @@
   <title>Run Elite</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/loadproduct.css">
   <link rel="icon" href="image/runelite-removebg.png">
   <link rel="stylesheet" href="fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +35,7 @@
     <div class="nav">
       <ul>
         <li><a href="index.php">Trang chủ</a></li>
-        <li><a href="">Sản Phẩm</a></li>
+        <li><a href="index.php?act=loadallsp">Sản Phẩm</a></li>
         <li class="nav2">
           <a href="">My Order <i class="fa-regular fa-heart"></i></a>
         </li>

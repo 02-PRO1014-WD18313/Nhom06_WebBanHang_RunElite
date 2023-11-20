@@ -25,7 +25,7 @@
               class="fa-solid fa-chevron-right dropdown"></i> </a>
           <div class="sub-menu">
             <a href="index.php?act=listdm" class="sub-item">Danh Sách</a>
-            <a href="#" class="sub-item">Thêm Danh Mục</a>
+            <a href="index.php?act=adddm" class="sub-item">Thêm Danh Mục</a>
           
           </div>
         </div>
@@ -36,8 +36,6 @@
             <div class="sub-menu">
               <a href="index.php?act=addsp" class="sub-item">Thêm sản phẩm</a>
               <a href="index.php?act=listsp" class="sub-item">danh sách</a>
-
-              <a href="#" class="sub-item">Sửa sản phẩm</a>
             </div>
         </div>
 
@@ -82,7 +80,7 @@
         </div>
         <!-- đăng xuất  -->
         <div class="logout">
-          < href="#">
+          <a href="#">
             <i class="fas fa-sign-out-alt icon"></i>
             <span class="">Đăng Xuất</span></a>
           </a>

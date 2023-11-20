@@ -11,6 +11,8 @@
 .wrapper{
     font-family:'Roboto', sans-serif;  
     background-color: #f4f4f4;
+    /* padding-bottom: 30px; */
+
 }
 
   /* CSS CHO PHẦN HEADER */
@@ -29,7 +31,7 @@ a{
     background-color: white;
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
     height: 100px;
-    margin-bottom: 20px;
+
     
 }
 /* .header-img{
@@ -169,6 +171,8 @@ a{
     width: 1280px;
     margin:0 auto;
     padding-bottom: 20px;
+    padding-top:30px;
+    /* background-color: #f4f4f4; */
 }
 
    /* css cho phần nội dung */
@@ -366,6 +370,7 @@ a{
   width: 230px;
   border:1px solid #86cf40; 
   position: relative;
+  height: fit-content;
 }
 
 .product-image-container {
@@ -430,10 +435,12 @@ a{
 .product-title {
   font-weight: bold;
   margin: 10px 0;
-  word-wrap: break-word;
-  word-break: break-all;
+  overflow-wrap: break-word;
   white-space: normal;
   max-width: 100%;
+}
+.product-title:focus{
+  color: #0db5a3;
 }
 
 .product-price {
@@ -495,9 +502,11 @@ a{
 }
 .adidas h1{
   margin-bottom: 15px;
-  color: #0db5a3;
   border-bottom: 2px solid #0db5a3;
   padding-top: 10px;
+}
+.adidas h1 a{
+  color: #0db5a3;
 }
 .adidas-product{
   display: flex;
@@ -539,7 +548,6 @@ a{
 padding: 1px;
 background-color: rgb(42, 39, 39);
 color: white;
-
 }
 .footer-row{
   /* border: 1px solid red; */
@@ -583,6 +591,8 @@ transition: all 0.12s linear;
   
 }
 
+
+
 .icon img{
   width: 50px;
   height: 50px;
@@ -624,6 +634,9 @@ font-size: 19px;
 
 
     /* CHI TIẾT SẢN PHẨM  */
+.container-spct{
+  background-color: #f4f4f4;
+}
 
 .detail_product{
   background-color: #fff;
@@ -633,18 +646,19 @@ font-size: 19px;
   display: flex;  
   width: 1280px;
   margin:0 auto;
+  margin-top: 20px;
 }
-.etail_product-image{
+.detail_product-image{
   width: 450px;
   height: 450px;
 }
-.etail_product-image img{
+.detail_product-image img{
   width: 100%;
   height: 100%;
 }
 .detail_product-ship{
   width: 450px;
-  margin-top: 5px;
+  margin-top: 10px;
   text-align: center;
   font-size: 20px;
   background-color: #fff;
