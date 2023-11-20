@@ -1,8 +1,13 @@
 <?php
 session_start();
 include "model/pdo.php";
+include "global.php";
 include "model/taikhoan.php";
-
+include "model/sanpham.php";
+include "model/danhmuc.php";
+$allProduct=load_all_product();
+$allCategory=loadall_danhmuc();
+$product_adidas=loadall_danhmuc("",1);
 include "view/header.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
@@ -54,11 +59,31 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "view/login.php";
             break;
-            case "dangxuat":
-            
-                session_unset();
-                header('Location: index.php');
+        case "dangxuat":
+        
+            session_unset();
+            header('Location: index.php');
+            break;
+        case "loadallsp":
+            include "view/loadproduct.php";
+            break;
+        case "product_category":
+            if(isset($_GET['id_category']) && ($_GET['id_category']>0) ){
+                $id_category=$_GET['id_category'];
+                $dssp=loadall_sanpham("", $id_category);
+                include "view/product_category.php";
+            }
+            break;
+        case "product_detail":
+            if(isset($_GET['id_product']) && ($_GET['id_product']>0)){
+                $id=$_GET['id_product'];
+                $product_detail=loadone_sanpham($id);
+                include "view/chitietsanpham.php";
                 break;
+            }else {
+                include "view/trangchu.php";
+            }
+            
     }
 } else {
     include "view/trangchu.php";

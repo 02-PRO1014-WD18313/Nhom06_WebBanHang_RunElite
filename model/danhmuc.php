@@ -8,7 +8,7 @@
         pdo_execute($sql);
     }
     function loadall_danhmuc(){
-        $sql="select * from category order by id_category desc";
+        $sql="select * from category";
         $listdanhmuc = pdo_query($sql);
         return  $listdanhmuc;
     }

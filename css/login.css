@@ -12,7 +12,7 @@
     font-family:Arial, Helvetica, sans-serif;
     padding: 0;
 }
-h1{
+.form-content>h1{
     text-align: center;
 }
 .form{

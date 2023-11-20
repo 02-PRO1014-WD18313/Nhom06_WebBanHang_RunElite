@@ -7,8 +7,8 @@
 
 }
 .addProduct-header{
-    color: #0db5a3;
-    border-bottom:3px solid #0db5a3;
+    color: #34af6d;
+    border-bottom:3px solid #34af6d;
     margin: 10px 10px 0 10px;
     padding-bottom: 5px;
 }
@@ -70,7 +70,7 @@
 }
 .product-submit input, .product-submit button{
     padding:5px 12px;
-    background-color: #0db5a3;
+    background-color: #34af6d;
     border: none;
     border-radius: 10px;
     color:black;
