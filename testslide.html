@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Product Slideshow</title>
+</head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+.slideshow-container {
+  max-width: 1300px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+</style>
+<body>
+
+<div class="slideshow-container">
+  <div class="slides">
+    <div class="slide">
+      <img src="image/adidas_af1.jpg" alt="Product 1">
+    </div>
+    <div class="slide">
+      <img src="image/container-background1.jpg" alt="Product 2">
+    </div>
+    <div class="slide">
+      <img src="image/google.png" alt="Product 3">
+    </div>
+    <div class="slide">
+      <img src="image/jordan-offwhite-red.jpg" alt="Product 4">
+    </div>
+    <div class="slide">
+      <img src="image/van-old-skool.jpg" alt="Product 5">
+    </div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">Preview</a>
+  <a class="next" onclick="plusSlides(1)">next</a>
+</div>
+
+<script>
+    let startIndex = 0;
+const numVisibleProducts = 4;
+
+function plusSlides(n) {
+  startIndex += n;
+  showSlides();
+}
+
+function showSlides() {
+  const slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (let i = startIndex; i < startIndex + numVisibleProducts; i++) {
+    if (i < slides.length) {
+      slides[i].style.display = "block";
+    }
+  }
+
+  // Reset startIndex if it exceeds the total number of slides
+  if (startIndex >= slides.length) {
+    startIndex = 0;
+  }
+
+  // Reset startIndex to the last set of products if it becomes negative
+  if (startIndex < 0) {
+    startIndex = slides.length - numVisibleProducts;
+  }
+}
+
+// Initial display
+showSlides();
+</script>
+
+</body>
+</html>
