@@ -51,7 +51,7 @@
                     <div class="product-title"><a href="'.$linkspct.'">'.$product_name.'</a></div>
                     <div class="product-price">'.$price.' VNĐ</div>
                     <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                    <div class="buy-now"><a href="">Mua Ngay</a></div>
+                    <a href="index.php?act=buy_now&id_product='.$id_product.'" class="buy-now">Mua Ngay</a>
                     <div class="box-viewStar">
                         <div class="view-count">Lượt xem: 1000</div>
                         <div class="product-star">
