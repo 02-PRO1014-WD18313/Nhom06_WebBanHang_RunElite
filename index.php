@@ -83,7 +83,23 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }else {
                 include "view/trangchu.php";
             }
-            
+            case "buy_now":
+                if(isset($_GET['id_product'])&& ($_GET['id_product']>0)){
+                    $id=$_GET['id_product'];
+                    $product_detail=loadone_sanpham($id);
+                }
+              include "view/buy-now.php";
+              break;
+
+              case "buy_now_result":
+                if(isset($_POST['order_click'])&&($_POST['order_click'])){
+                    $thongbao="Mua Hàng Thành Công";
+                    include "view/buy_now_result.php";
+                }else{
+                    include "view/buy-now.php";  
+                }
+               
+                break;
     }
 } else {
     include "view/trangchu.php";

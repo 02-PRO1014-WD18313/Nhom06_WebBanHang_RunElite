@@ -80,9 +80,9 @@
         </div>
         <!-- đăng xuất  -->
         <div class="logout">
-          <a href="#">
+          <a href="../index.php">
             <i class="fas fa-sign-out-alt icon"></i>
-            <span class="">Đăng Xuất</span></a>
+            <span class="">Quay Lại Cửa Hàng</span></a>
           </a>
         </div>
       </div>
