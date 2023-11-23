@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/loadproduct.css">
+  <link rel="stylesheet" href="css/cart.css">
   <link rel="icon" href="image/runelite-removebg.png">
   <link rel="stylesheet" href="fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
