@@ -36,10 +36,11 @@
                 </div>
                 <div class="button-action">
                     <button class="button-action-1">Thêm vào giỏ hàng <i class="fa-solid fa-cart-shopping"></i></button>
-                    <button class="button-action-2">Mua ngay</button>
+                     <a href="index.php?act=buy_now&id_product='.$id_product.'" class="buy-now">Mua Ngay</a>
+                   
                 </div>';
             ?>
-
+ <!-- <button class="button-action-2">Mua ngay</button> -->
         </div>
     </div>
 </div>
