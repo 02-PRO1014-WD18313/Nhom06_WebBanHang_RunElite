@@ -3,8 +3,50 @@
         background-color: #f4f4f4;
         padding: 25px 0;
     }
-</style>
+    .phantrang {
+        margin-top: 30px;
+    }
 
+    .phantrang ul {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .phantrang li {
+        margin-left: 20px;
+    }
+
+    .phantrang li a {
+        color: #333;
+        padding: 5px 12px;
+        border: 1px solid #0db5a3;
+
+    }
+
+    .phantrang-active a {
+        border: 1px solid red;
+        font-weight: 600;
+    }
+
+    .focus-page a {
+        background-color: #0db5a3;
+        font-weight: 600;
+
+    }
+</style>
+<?php
+$countProduct = isset($_GET['per_page']) ? $_GET['per_page'] : 8;
+$page =  isset($_GET['page']) ? $_GET['page'] : 1;
+$offset = ($page - 1) * $countProduct;
+$sql = "select *from product order by id_product desc limit $countProduct offset $offset";
+$products = pdo_query($sql);
+$sql = "select * from product";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$rowCount = $stmt->rowCount();
+$totalPages = ceil($rowCount / $countProduct);
+?>
 <div class="container-product">
     <div class="container-allsp ">
         <div class="sidebar">
@@ -58,7 +100,7 @@
         <div class="all-main-content">
             <div class="main-content">
                 <?php
-                foreach ($filter_products as $u) {
+                foreach ($products as $u) {
                     extract($u);
                     $linkspct = "index.php?act=product_detail&id_product=" . $id_product;
                     $hinh = $img_path . $image;
@@ -88,6 +130,33 @@
                 }
                 ?>
             </div>
+            <div class="phantrang">
+                <ul>
+                    <?php if ($page > 3) {
+                        $first_page = 1; ?>
+                        <li><a href="?act=loadallsp&?per_page=<?= $countProduct ?> & page=<?= $first_page ?>"> Trước </a></li>
+                    <?php }; ?>
+
+
+                    <?php for ($i = 1; $i <= $totalPages; $i++) :  ?>
+                        <?php if ($i != $page) : ?>
+                            <?php if ($i >= $page - 2 && $i <= $page + 2) : ?>
+                                <li><a href="?act=loadallsp&per_page=<?= $countProduct ?> & page= <?= $i ?> "><?= $i ?></a></li>
+                            <?php endif; ?>
+                        <?php else : ?>
+                            <li class="focus-page"><a href="?act=loadallsp&?per_page=<?= $countProduct ?> & page= <?= $i ?> "><?= $i ?></a></li>
+                        <?php endif ?>
+                    <?php endfor; ?>
+                    <?php if ($page <= $totalPages - 2) {
+                        $end_page = $totalPages; ?>
+                        <li><a href="?act=loadallsp&?per_page=<?= $countProduct ?> & page=<?= $end_page ?>"> Sau </a></li>
+                    <?php } ?>
+                </ul>
+            </div>
+
         </div>
+
+
     </div>
+
 </div>

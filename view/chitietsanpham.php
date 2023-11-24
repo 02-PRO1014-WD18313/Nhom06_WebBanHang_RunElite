@@ -35,12 +35,17 @@
                     <input type="number" min="1" value="1">
                 </div>
                 <div class="button-action">
-                    <button class="button-action-1">Thêm vào giỏ hàng <i class="fa-solid fa-cart-shopping"></i></button>
-                     <a href="index.php?act=buy_now&id_product='.$id_product.'" class="buy-now">Mua Ngay</a>
-                   
+                    <form action="index.php?act=addtocart" method="post">
+                        <input type="hidden" name="id_product" value="' . $id_product . '">
+                        <input type="hidden" name="product_name" value="' . $product_name . '">
+                        <input type="hidden" name="image" value="' . $image . '">
+                        <input type="hidden" name="price" value="' . $price . '">
+                        <input type="submit" name="addtocart" value="Thêm giỏ hàng">
+                    </form>
+                    <a href="index.php?act=buy_now&id_product=' . $id_product . '" >Mua Ngay</a>
                 </div>';
             ?>
- <!-- <button class="button-action-2">Mua ngay</button> -->
+            <!-- <button class="button-action-2">Mua ngay</button> -->
         </div>
     </div>
 </div>
