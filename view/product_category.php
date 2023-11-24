@@ -1,4 +1,9 @@
-<div class="wrapper">
+<style>
+    .aaa{
+  padding-bottom: 30px;
+}
+</style>
+<div class="aaa">
     <div class="container-allsp ">
         <div class="sidebar">
             <div class="sidebar-category">
@@ -23,6 +28,22 @@
                     <li><a href="#">Sports</a></li> -->
                 </ul>
             </div>
+
+            <!-- LỌC GIÁ -->
+
+            <div class="search-price-product">
+                <p>Khoảng giá</p>
+                <form action="index.php?act=filter-price" method="post">
+                    <div class="input-price">
+                        <input type="number" name="price-min"  min="0" placeholder="đ Từ"> - <input  min="0" type="number" placeholder="đ Đến" name="price-max">
+                    </div>
+                    <span style="color: red;"><?= isset($errFilter)?$errFilter:'' ?></span>
+                    <input type="submit" name="search-pice"  value="ÁP DỤNG">
+                </form>
+                
+            </div>
+
+            <!-- END LỌC GIÁ -->
 
             <div class="boxtt">
                 <h5>Thông tin đặt hàng</h5>
@@ -52,7 +73,7 @@
                     <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
                     <div class="buy-now"><a href="">Mua Ngay</a></div>
                     <div class="box-viewStar">
-                        <div class="view-count">Lượt xem: 1000</div>
+                        <div class="view-count">Lượt xem: '.$view.'</div>
                         <div class="product-star">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -68,4 +89,5 @@
 
         </div>
 
+    </div>
     </div>
