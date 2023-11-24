@@ -52,3 +52,13 @@ function update_sanpham($id, $iddm, $tensp, $giasp, $mota, $photo)
 
     pdo_execute($sql);
 }
+function update_view($id){
+    $sql="UPDATE product SET view=view+1 WHERE id_product =".$id;
+    pdo_execute($sql);
+}
+function filter_price_product( $min,$max){
+    $sql="SELECT * FROM product WHERE price BETWEEN $min AND $max ORDER BY price ASC";
+    $result=pdo_query($sql);
+    return $result;
+
+}

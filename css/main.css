@@ -11,8 +11,6 @@
 .wrapper{
     font-family:'Roboto', sans-serif;  
     background-color: #f4f4f4;
-    /* padding-bottom: 30px; */
-
 }
 
   /* CSS CHO PHẦN HEADER */
@@ -549,6 +547,7 @@ a{
 padding: 1px;
 background-color: rgb(42, 39, 39);
 color: white;
+margin-bottom: 20px;
 }
 .footer-row{
   /* border: 1px solid red; */
@@ -568,6 +567,7 @@ justify-content: space-around;
   /* border: 1px solid red; */
 
 }
+
 .footer-col-1{
   /* border: 1px solid blue; */
 width: 50%;
@@ -721,28 +721,37 @@ font-size: 19px;
   
 }
 .button-action{
-  width: 600px;
-  margin:0 auto;
+  display: flex;
+  justify-content: space-around;
  
 }
-.button-action button{
+.button-action input{
+  display: block;
+  width: 200px;
   padding: 10px 30px;
   margin-right: 30px;
   color:#fff;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
-  border-radius: 3px;
-  /* background-color: #fff; */
-}
-.button-action-1{
-  background-color: #86cf40;
-}
-.button-action-2{
+  border-radius: 5px;
   background-color: #0db5a3;
 }
-.button-action-1:hover,.button-action-2:hover{
-  opacity: 0.8;
-  cursor: pointer;
+
+.button-action a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 200px;
+  color:#fff;
+  font-size: 16px;
+  background-color: #0db5a3;
+
 }
+.button-action input:hover,.button-action a:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
   
   
