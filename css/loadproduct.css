@@ -1,3 +1,7 @@
+.container-product{
+    background-color: #f4f4f4;
+    padding-top: 30px;
+}
 .container-allsp {
     width: 1280px;
     margin: 0px auto;
@@ -15,6 +19,8 @@
 
 .sidebar-category {
     border-radius: 8px;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.5);
+
 }
 
 .sidebar li {
@@ -40,8 +46,46 @@
     text-align: center;
     background-color: #0db5a3;
     border-radius: 5px 5px 0 0;
-    border: 1px solid #333;
 
+}
+
+.search-price-product{
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 5px;
+    padding:10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.5);
+
+}
+.search-price-product p{
+    font-size: 20px;
+    color: #0db5a3;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+.input-price>input{
+    width: 80px;
+    height: 30px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
+.input-price>input:focus{
+    border-color: #0db5a3;
+}
+.search-price-product input[type="submit"]{
+    width: 120px;
+    background-color: #0db5a3;
+    padding:8px 20px;
+    border: none;
+    margin-top: 8px;
+    border-radius: 10px;
+    color: #fff;
+}
+.search-price-product input[type="submit"]:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .main-content {
@@ -60,8 +104,7 @@
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
-    border:1px solid #333;
-    /* box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.5); */
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.5);
 
 }
 
@@ -80,3 +123,4 @@
     font-size: 14px;
     text-align: center;
 }
+ 

@@ -149,10 +149,10 @@ border-radius: 0.5rem;
   transition: 0.3s ease;
 
 }
-/* .side-bar .logout a:hover span{
+.side-bar .logout a:hover span{
   font-size: 18px;
 
-} */
+}
 .side-bar .logout a:hover i{
   font-size: 30px;
 }
@@ -175,13 +175,15 @@ border-radius: 0.5rem;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  height: 660px;
+  overflow: scroll;
+
 }
 .table{
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 15px;
-  width: 100%;
-  /* min-width: 100%; */
+  min-width: 100%;
   overflow: hidden;
   border-radius: 5px 5px 0 0;
 }
