@@ -4,6 +4,7 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/dathang.php";
 include "header.php";
 
 
@@ -110,7 +111,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
+            case "listdh":
+                $listdh =loadall_donhang();
+                
+                include "donhang/list.php";
+                break;
     }
+    
+        
 } else {
     include "danhmuc.php";
 }
