@@ -1,12 +1,10 @@
 <?php
-
-
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
-include "../model/dathang.php";
+// include "../model/dathang.php";
 include "header.php";
-
+$allCategory=loadall_danhmuc();
 
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
@@ -32,10 +30,21 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "sanpham/addsp.php";
             break;
+            
         case "listsp":
-            $listsp = loadall_sanpham();
+            if(isset($_POST['listtimkiem'])&&($_POST['listtimkiem'])) {
+                $kyw=$_POST['kyw'];
+                $iddm=$_POST['iddm'];
+            }else{
+                $kyw='';
+                $iddm=0;
+            }
+            $listdm = loadall_danhmuc();
+            $listsp=loadall_sanpham($kyw,$iddm);
             include "sanpham/listsp.php";
             break;
+
+
         case "xoasp":
             if (isset($_GET['id_product'])) {
                 delete_sanpham($_GET['id_product']);
@@ -50,6 +59,42 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "sanpham/update.php";
             break;
+////////////////////////////////
+            case "xoatk":
+                if (isset($_GET['id_user'])) {
+                    delete_taikhoan($_GET['id_user']);
+                }
+                $listtaikhoan = loadall_taikhoan();
+                include "taikhoan/list.php";
+                break;
+
+            case "suatk":
+                // Lấy 1 record đúng vs id truyền vào
+                if (isset($_GET['id_user'])) {
+                    $onetaikhoan = loadone_taikhoan($_GET['id_user']);
+                }
+                // Cần dstk
+                $listtaikhoan=loadall_taikhoan();
+                include "taikhoan/suatk.php";
+                break;
+
+                case "updatetk":
+                    if (isset($_POST['add_taikhoan']) && ($_POST['add_taikhoan'])) {
+                        $id_user = $_POST['id_user'];
+                        $tentk = $_POST['tentk'];
+                        $password = $_POST['password'];
+                        $gmail = $_POST['gmail'];
+                        $phone = $_POST['phone'];
+                        $role = $_POST['role'];
+                        // $address = $_POST['address'];
+                        // print_r($_POST);
+                        $address = $_POST['address'];
+                        update_taikhoan($id_user, $tentk, $password, $gmail, $phone, $role, $address);
+                            $thongbao = "Thay đổi tài khoản thành công";
+                            $listtaikhoan = loadall_taikhoan();
+                include "taikhoan/list.php";
+                    }
+                    break;
         case "updatesp":
             if (isset($_POST['add_product']) && ($_POST['add_product'])) {
                 $id = $_POST['idsp'];
@@ -77,6 +122,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "danhmuc/list.php";
 
             break;
+
+            case "dskh":
+                $listtaikhoan = loadall_taikhoan();
+                include "taikhoan/list.php";
+                break;
+
         case "adddm":
             if (isset($_POST['add_dm']) && ($_POST['add_dm'])) {
                 $tendm = $_POST['ten_dm'];
