@@ -43,8 +43,7 @@
         <div class="item">
           <a class="sub-btn"><i class="fas fa-user-cog icon"></i> Tài Khoản<i class="fa-solid fa-chevron-right dropdown"></i></a>
           <div class="sub-menu">
-            <a href="#" class="sub-item">Sub Item 01</a>
-            <a href="#" class="sub-item">Sub Item 02</a>
+            <a href="index.php?act=dskh" class="sub-item">Khách hàng</a>
           </div>
         </div>
 
@@ -82,7 +81,7 @@
         <div class="logout">
           <a href="../index.php">
             <i class="fas fa-sign-out-alt icon"></i>
-            <span class="">Quay Lại Cửa Hàng</span></a>
+            <span class="">Quay Lại</span></a>
           </a>
         </div>
       </div>
