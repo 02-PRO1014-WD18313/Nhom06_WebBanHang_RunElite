@@ -3,9 +3,9 @@
     $phone=$_SESSION['user']['phone'];
     $address=$_SESSION['user']['address'];
 }else{
-    $name="";
-    $phone="";
-    $address="";
+   
+ header('Location: index.php?act=dangnhap');
+ echo '<script>alert("Xin chào! Đây là cảnh báo.");</script>';
 } ?>
 
 <body>
@@ -36,14 +36,14 @@
 
                 <tr>
                     <!-- <td class="product-number">1</td> -->
-                    <td class="product-name" ><input type="text" name="product-name" id="" value="<?=$product_name?>" readonly disabled style="border: none;"> </td>
+                    <td class="product-name" ><input type="text" name="product-name" id="" value="<?=$product_name?>" readonly style="border: none;"> </td>
                     <td class="product-img"><input type="image" src="<?=$img?>" alt="" name="product-img " ></td>
                     <!-- <td><select name="" id="">
                         <option value="">41</option>
                         <option value="">42</option>
                         <option value="">43</option>
                     </select></td> -->
-                    <td id="product-price" class="product-price"><input type="text" name="product-price" id="" value="<?=$price?>" readonly disabled></td>
+                    <td id="product-price" class="product-price"><input type="text" name="product-price" id="" value="<?=$price?>" readonly></td>
                     <td class="product-quantity"><input type="number" value="1" min="1" name="quantity"></td>
                     <td class="total-money"><input type="hidden" name="total_money" id="total-money-input" value=""></td>
 
@@ -56,7 +56,7 @@
 <div class="form_payment">
 <div class="form_order">
               
-                <div class="form_content"><p>Người nhận:</p><input type="text" value="<?=$name?>" name="name_oder" class="validate form_order_input"></div>
+                <div class="form_content"><p>Người nhận:</p><input type="text" value="" name="name_oder" class="validate form_order_input"></div>
                 <div class="form_content"><p>Điện thoại: </p><input type="text" value="<?=$phone?>" name="phone_oder" class="validate form_order_input"></div>
                 <div class="form_content"><p>Địa chỉ: </p><input type="text" value="<?=$address?>" name="address_oder" class="validate form_order_input"></div>
             
