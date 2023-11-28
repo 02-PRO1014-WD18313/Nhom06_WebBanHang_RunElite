@@ -62,8 +62,8 @@
           <a class="sub-btn"><i class="fa-solid fa-truck-fast icon"></i>Đơn Hàng<i
               class="fa-solid fa-chevron-right dropdown"></i></a>
             <div class="sub-menu">
-              <a href="#" class="sub-item">Sub Item 01</a>
-              <a href="#" class="sub-item">Sub Item 02</a>
+              <a href="index.php?act=listdh" class="sub-item">Danh Sách Đơn Hàng</a>
+              <!-- <a href="#" class="sub-item">Sub Item 02</a> -->
             </div>
         </div>
 
