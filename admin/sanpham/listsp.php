@@ -1,6 +1,4 @@
-<?php
-// $listsp = loadall_sanpham();
-?>
+
 <section class="main">
     <!-- content  -->
     <section class="attendance">

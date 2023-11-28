@@ -5,7 +5,7 @@ include "global.php";
 include "model/taikhoan.php";
 include "model/sanpham.php";
 include "model/danhmuc.php";
-// include "model/dathang.php";
+include "model/dathang.php";
 if (!isset($_SESSION['mycart'])) {
     $_SESSION['mycart'] = [];
 }
@@ -92,17 +92,21 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             break;
         case "addtocart":
-            if (isset($_POST['addtocart']) && ($_POST['addtocart'])) {
-                $id_product = $_POST['id_product'];
-                $product_name = $_POST['product_name'];
-                $image = $_POST['image'];
-                $price = $_POST['price'];
-                $soluong = 1;
-                $total_price = $soluong * $price;
-                $productadd = [$id_product, $product_name, $image, $price, $soluong, $total_price];
-                array_push($_SESSION['mycart'], $productadd);
+            if(isset($_SESSION['user'])){
+                if (isset($_POST['addtocart']) && ($_POST['addtocart'])) {
+                    $id_product = $_POST['id_product'];
+                    $product_name = $_POST['product_name'];
+                    $image = $_POST['image'];
+                    $price = $_POST['price'];
+                    $soluong = 1;
+                    $total_price = $soluong * $price;
+                    $productadd = [$id_product, $product_name, $image, $price, $soluong, $total_price];
+                    array_push($_SESSION['mycart'], $productadd);
+                }
+                include "view/cart/viewcart.php";
+            }else{
+                include "view/login.php";
             }
-            include "view/cart/viewcart.php";
             break;
         case "delete_cart":
             if (isset($_GET['idcart'])) {

@@ -5,7 +5,7 @@ $sql = "INSERT INTO oder_detail(product_name,product_price,quantity,name_order,p
  pdo_execute($sql);
 }
 function loadall_donhang(){
-    $sql = "select * from oder_detail where 1";
+    $sql = "select * from oder_detail where 1 order by id_order desc";
     $listdh=  pdo_query($sql);
     return $listdh;
 }
