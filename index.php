@@ -79,6 +79,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "view/product_category.php";
             }
             break;
+            
         case "product_detail":
             if (isset($_GET['id_product']) && ($_GET['id_product'] > 0)) {
                 $id = $_GET['id_product'];

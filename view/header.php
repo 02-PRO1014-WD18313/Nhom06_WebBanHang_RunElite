@@ -28,7 +28,7 @@
 
     <div class="box_search">
       <form action="" method="POST">
-        <input type="text" placeholder="Từ khóa tìm kiếm" name="keyword">
+        <input type="text" placeholder="Từ khóa tìm kiếm" name="kyw">
         <button name="timkiem"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
     </div>
