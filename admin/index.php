@@ -3,6 +3,9 @@ include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
+include "../model/dathang.php";
+
+
 include "header.php";
 $allCategory=loadall_danhmuc();
 
@@ -14,6 +17,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id_category = $_POST['id_category'];
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
+                $giasale=$_POST['giasale'];
                 $mota = $_POST['mota'];
                 $photo = null;
                 if ($_FILES['image']['name'] != "") {
@@ -23,7 +27,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if ($tensp == "" || $giasp == '') {
                     $err = "Vui lòng không để trống !";
                 } else {
-                    insert_sanpham($tensp, $giasp, $photo, $mota, $id_category);
+                    insert_sanpham($tensp, $giasp,$giasale, $photo, $mota, $id_category);
                     $thongbao = "Thêm thành công sản phẩm!";
                 }
             }
@@ -36,8 +40,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $kyw=$_POST['kyw'];
                 $iddm=$_POST['iddm'];
             }else{
-                $kyw='';
-                $iddm=0;
+                $kyw=null;
+                $iddm=null;
             }
             $listdm = loadall_danhmuc();
             $listsp=loadall_sanpham($kyw,$iddm);
@@ -101,6 +105,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id_category = $_POST['id_category'];
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
+                $giasale=$_POST['giasale'];
                 $mota = $_POST['mota'];
                 $photo = null;
                 if ($_FILES['image']['name'] != "") {
@@ -110,9 +115,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if ($tensp == "" || $giasp == '') {
                     $err = "Vui lòng không để trống !";
                 } else {
-                    update_sanpham($id, $id_category, $tensp, $giasp, $mota, $photo);
-                    $thongbao = "Thêm thành công sản phẩm!";
+                    update_sanpham($id, $id_category, $tensp, $giasp, $giasale, $mota, $photo);
                     $listdm = loadall_danhmuc();
+                    $listsp=loadall_sanpham();
+
                     include "sanpham/listsp.php";
                 }
             }
@@ -162,7 +168,28 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
+            case "listdh":
+                $listdh =loadall_donhang();
+                
+                include "donhang/list.php";
+                break;
+                case "suadonhang":
+                    if (isset($_GET['id_order']) && ($_GET['id_order']) > 0) {
+                        $sql = "select * from oder_detail where id_order=" . $_GET['id_order'];
+                        $dh= pdo_query_one($sql);
+                    }
+                    include "donhang/update.php";
+                    break;
+                    case "updatedh":
+                        if(isset($_POST[' update_dh'])&&($_POST[' update_dh'])){
+$name_order = $_POST['name_order'];
+$phone_order = $_POST['phone_order'];
+
+                        }
+                        break;
     }
+    
+        
 } else {
     include "danhmuc.php";
 }
