@@ -35,12 +35,12 @@
       <div class="price-product">
         <div class="price-noSale">
           <label for="">Giá sản phẩm :</label>
-          <input class="add-input" type="number" name="giasp" step="1000" min="0" value="<?=$oneProduct['price']?>">
+          <input class="add-input" type="number" name="giasp"  min="0" value="<?=$oneProduct['price']?>">
         </div>
 
         <div class="price-Sale">
           <label for="">Giá Sale :</label>
-          <input class="add-input" type="number" name="giasale" step="1000">
+          <input class="add-input" type="number" name="giasale"  value="<?=$oneProduct['price_sale']?>">
         </div>
       </div>
 

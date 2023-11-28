@@ -65,14 +65,18 @@
     display: block;
     margin-bottom: 5px;
 }
+
 .input-price>input{
-    width: 80px;
+    margin-left: 8px;
+    display: block;
+    width: 180px;
     height: 30px;
     padding: 5px 10px;
     border: 1px solid #333;
 }
 .input-price>input:focus{
-    border-color: #0db5a3;
+    border: none;
+    outline: 2px solid #0db5a3;
 }
 .search-price-product input[type="submit"]{
     width: 120px;

@@ -36,14 +36,17 @@
 
                 <tr>
                     <!-- <td class="product-number">1</td> -->
-                    <td class="product-name" ><input type="text" name="product-name" id="" value="<?=$product_name?>" readonly style="border: none;"> </td>
+                   <td class="product-name" ><input type="text" name="product-name" id="" value="<?=$product_name?>" readonly style="border: none;"> </td>
+
                     <td class="product-img"><input type="image" src="<?=$img?>" alt="" name="product-img " ></td>
                     <!-- <td><select name="" id="">
                         <option value="">41</option>
                         <option value="">42</option>
                         <option value="">43</option>
                     </select></td> -->
+
                     <td id="product-price" class="product-price"><input type="text" name="product-price" id="" value="<?=$price?>" readonly></td>
+
                     <td class="product-quantity"><input type="number" value="1" min="1" name="quantity"></td>
                     <td class="total-money"><input type="hidden" name="total_money" id="total-money-input" value=""></td>
 
