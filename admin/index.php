@@ -2,7 +2,7 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
-// include "../model/dathang.php";
+include "../model/dathang.php";
 include "header.php";
 $allCategory=loadall_danhmuc();
 
