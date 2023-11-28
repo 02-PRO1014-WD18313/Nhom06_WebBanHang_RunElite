@@ -407,3 +407,8 @@ a.google span{
     }
     
 }
+.click{
+  border: 2px solid red;
+  width: 100px;
+  height: 200px;
+}
