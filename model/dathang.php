@@ -9,4 +9,8 @@ function loadall_donhang(){
     $listdh=  pdo_query($sql);
     return $listdh;
 }
+function update_donhang($name_order,$address_order,$phone_order,$status,$id_order){
+    $sql = "UPDATE oder_detail set name_order='".$name_order."',address_oder='".$address_order."',phone_oder='".$phone_order."',status='".$status."' where id_order='".$id_order."';";
+    pdo_execute($sql);
+}
 ?>
