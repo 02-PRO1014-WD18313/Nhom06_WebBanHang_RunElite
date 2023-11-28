@@ -4,7 +4,7 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
-include "../model/dathang.php";
+// include "../model/dathang.php";
 include "header.php";
 
 
@@ -116,6 +116,20 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 
                 include "donhang/list.php";
                 break;
+                case "suadonhang":
+                    if (isset($_GET['id_order']) && ($_GET['id_order']) > 0) {
+                        $sql = "select * from oder_detail where id_order=" . $_GET['id_order'];
+                        $dh= pdo_query_one($sql);
+                    }
+                    include "donhang/update.php";
+                    break;
+                    case "updatedh":
+                        if(isset($_POST[' update_dh'])&&($_POST[' update_dh'])){
+$name_order = $_POST['name_order'];
+$phone_order = $_POST['phone_order'];
+
+                        }
+                        break;
     }
     
         
