@@ -194,6 +194,22 @@ update_donhang($name_order,$address_order,$phone_order,$status,$id_order);
                         $listdh =loadall_donhang();
             include "donhang/list.php";
                         break;
+                        case "xoadonhang":
+                            if (isset($_GET['id_order']) && ($_GET['id_order']) > 0) {
+                                $id = $_GET['id_order'];
+                                xoa_dh($id);
+                            }
+                            $listdh =loadall_donhang();
+                
+                            include "donhang/list.php";
+                            break;
+                            case "ctdonhang":
+                                if (isset($_GET['id_order']) && ($_GET['id_order']) > 0) {
+                                    $id = $_GET['id_order'];
+                                    $dh=loadone_donhang($id);
+                                }
+                                include "donhang/chitiet.php";
+                                break;
     }
     
         

@@ -98,6 +98,11 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     $product_name = $_POST['product_name'];
                     $image = $_POST['image'];
                     $price = $_POST['price'];
+                    if(isset($_POST['price_sale']) && ($_POST['price_sale'] !=0)){    
+                        $price = $_POST['price_sale'];
+                }else{
+                    $price = $_POST['price'];
+                }
                     $soluong = 1;
                     $total_price = $soluong * $price;
                     $productadd = [$id_product, $product_name, $image, $price, $soluong, $total_price];
@@ -138,11 +143,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $product_price=$_POST['product-price'];
                 $quantity=$_POST['quantity'];
                 $totalMoney=$product_price * $quantity;
+                $id_user=$_POST['id_user'];
+                date_default_timezone_set('Asia/Ho_Chi_Minh');
+            $order_date=date('d/m/Y H:i:s');;
+            echo $order_date;
+                print_r($_POST);
                 if($pay=="online"){
                     
                    include "view/onlinepay.php";
                 }else{
-  insert_donhang($pr_name,$product_price, $quantity,$name, $phone,$address,$note, $pay,$totalMoney);
+  insert_donhang($pr_name,$product_price, $quantity,$name, $phone,$address,$note, $pay,$totalMoney,$id_user,$order_date);
 
                 $thongbao = "Mua Hàng Thành Công";
                 include "view/buy_now_result.php";
