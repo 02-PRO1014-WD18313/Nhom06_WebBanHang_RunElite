@@ -15,14 +15,14 @@ function load_all_product(){
     return $listsp;
 
 }
-function loadall_sanpham($keyw = "", $iddm = 0)
+function loadall_sanpham($kyw = "", $iddm = 0)
 {
     $sql = "select * from product where 1";
-    if ($keyw != "") {
-        $sql .= " and name like '%" . $keyw . "%'";
+    if ($kyw != "") {
+        $sql .=" and product_name like '%" . $kyw . "%'";
     }
     if ($iddm > 0) {
-        $sql .= " and id_category ='" . $iddm . "'";
+        $sql .=" and id_category ='" . $iddm . "'";
     }
     $sql .= " order by id_product desc";
     $listsanpham = pdo_query($sql);
