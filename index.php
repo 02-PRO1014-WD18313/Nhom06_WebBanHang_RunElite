@@ -5,6 +5,7 @@ include "global.php";
 include "model/taikhoan.php";
 include "model/sanpham.php";
 include "model/danhmuc.php";
+// include "model/dathang.php";
 if (!isset($_SESSION['mycart'])) {
     $_SESSION['mycart'] = [];
 }
@@ -124,13 +125,34 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case "buy_now_result":
             if (isset($_POST['order_click']) && ($_POST['order_click'])) {
+                $name=$_POST['name_oder'];
+                $phone=$_POST['phone_oder'];
+                $address=$_POST['address_oder'];
+                $pay=$_POST['paymentMethod'];
+                $note=$_POST['note'];
+                $pr_name=$_POST['product-name'];
+                $product_price=$_POST['product-price'];
+                $quantity=$_POST['quantity'];
+                $totalMoney=$product_price * $quantity;
+                if($pay=="online"){
+                    
+                   include "view/onlinepay.php";
+                }else{
+  insert_donhang($pr_name,$product_price, $quantity,$name, $phone,$address,$note, $pay,$totalMoney);
+
                 $thongbao = "Mua Hàng Thành Công";
                 include "view/buy_now_result.php";
+                }
+                // $product_img=$_POST['product-img'];
+              
             } else {
                 include "view/buy-now.php";
             }
 
             break;
+            case "return_pay":
+                include "view/return_pay.php";
+                break;
         case "filter-price":
             if (isset($_POST['search-pice']) && ($_POST['search-pice'])) {
                 $min=$_POST['price-min'];
