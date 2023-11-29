@@ -33,6 +33,8 @@
             <option value="check">Xác Nhận</option>
             <option value="shipping">Đang Vận Chuyển</option>
             <option value="done">Thành Công</option>
+            <option value="cancel">Hủy</option>
+            
         </select>
       </div>
 
