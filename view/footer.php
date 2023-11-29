@@ -37,7 +37,7 @@
   <div class="footer-row-1">
     <div class="footer-col-1">
       <h2>HỖ TRỢ KHÁCH HÀNG</h2>
-      <ul >
+      <ul>
         <li class="icon">
             <img src="image/youtube.png" alt="" srcset=""  >
             <img src="image/instagram.png" alt="" srcset=""  >
@@ -47,9 +47,16 @@
             <img src="image/placeholder.png" alt="" srcset="" style="width: 30px; height: 30px;">
             <a href="#">Địa Chỉ: Ngõ 56 Phương Canh</a>
         </li>
+      </ul>
     </div>
+    <div class="footer-col-1">
+      <h2>Đăng Ký Nhận Thông Tin Khuyến Mãi</h2>
+      <input type="email" name="" id="" placeholder="Email  ">
+      <input type="button" value="Đăng Ký">
+    </div>
+    
   </div>
   <div class="footer-row">
-    <p>Copyright © 2023 Sunhouse</p>
+    <p>Copyright © 2023 Runelite</p>
   </div>
 </footer>
