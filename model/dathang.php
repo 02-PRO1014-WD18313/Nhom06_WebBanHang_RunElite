@@ -22,4 +22,10 @@ function loadone_donhang($id){
     $dh = pdo_query_one($sql);
     return $dh;
 }
+function theodoi_donhang($id){
+    $sql = "select * from oder_detail where id_user='".$id."'";
+    $dh=  pdo_query($sql);
+    return $dh;
+   
+}
 ?>

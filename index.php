@@ -122,6 +122,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             header('location: index.php?act=viewcart');
             break;
         case "viewcart":
+
             include "view/cart/viewcart.php";
             break;
         case "buy_now":
@@ -183,6 +184,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "view/loadproduct2.php";
             }
             break;
+            case "follow_order":
+                if (isset($_GET['id_user']) && ($_GET['id_user'] > 0)){
+                    $id = $_GET['id_user'];
+                    // $dh = theodoi_donhang($id);
+                }
+                include "view/follow_order.php";
+                break;
+                case "buycart":
+                    include "view/cart/buycart.php";
+                    break;
     }
 } else {
     include "view/trangchu.php";

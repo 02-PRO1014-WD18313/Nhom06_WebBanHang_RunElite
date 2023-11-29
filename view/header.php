@@ -34,19 +34,20 @@
     </div>
 
     <div class="nav">
+    <?php
+          if (isset($_SESSION['user'])) {
+            extract($_SESSION['user']); ?>
       <ul>
         <li><a href="index.php">Trang chủ</a></li>
         <li><a href="index.php?act=loadallsp">Sản Phẩm</a></li>
         <li class="nav2">
-          <a href="">My Order <i class="fa-regular fa-heart"></i></a>
+          <a href="index.php?act=follow_order&id_user=<?=$id_user?>">My Order <i class="fa-regular fa-heart"></i></a>
         </li>
         <li>
-          <a href="index.php?act=addtocart"">My Cart <i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="index.php?act=addtocart">My Cart <i class="fa-solid fa-cart-shopping"></i></a>
         </li>
         <div class="menu2">
-          <?php
-          if (isset($_SESSION['user'])) {
-            extract($_SESSION['user']); ?>
+         
             <a href="">Xin chào : <?php echo $username; ?> !</a>
             <?php if ($role == 0) { ?>
               <ul class="menu2-1">
