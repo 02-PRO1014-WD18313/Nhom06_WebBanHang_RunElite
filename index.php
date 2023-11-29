@@ -11,6 +11,9 @@ if (!isset($_SESSION['mycart'])) {
 }
 $conn = pdo_get_connection();
 // $allProduct=load_all_product();
+$spmoi = load5sp_moi();
+$spview =load5sp_view();
+$spsale = load5sp_sale();
 $allCategory = loadall_danhmuc();
 $product_adidas = loadall_danhmuc("", 1);
 include "view/header.php";
@@ -97,12 +100,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     $id_product = $_POST['id_product'];
                     $product_name = $_POST['product_name'];
                     $image = $_POST['image'];
-                    $price = $_POST['price'];
+
                     if(isset($_POST['price_sale']) && ($_POST['price_sale'] !=0)){    
                         $price = $_POST['price_sale'];
-                }else{
-                    $price = $_POST['price'];
-                }
+                    }else{
+                        $price = $_POST['price'];
+                    }
+
                     $soluong = 1;
                     $total_price = $soluong * $price;
                     $productadd = [$id_product, $product_name, $image, $price, $soluong, $total_price];
