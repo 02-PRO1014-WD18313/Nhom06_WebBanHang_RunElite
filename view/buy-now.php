@@ -1,4 +1,5 @@
 <?php if(isset($_SESSION['user'])){
+    $id_user=$_SESSION['user']['id_user'];
     $name=$_SESSION['user']['username'];
     $phone=$_SESSION['user']['phone'];
     $address=$_SESSION['user']['address'];
@@ -19,6 +20,9 @@
             <?php if (isset($product_detail)) {
                 extract($product_detail);
                 $img = $img_path . $image;
+                if($price_sale!=0){
+                    $price = $price_sale;
+                }
             }
             ?>
             <table>
@@ -33,7 +37,9 @@
 
 
                 </tr>
+<?php 
 
+?>
                 <tr>
                     <!-- <td class="product-number">1</td> -->
                    <td class="product-name" ><input type="text" name="product-name" id="" value="<?=$product_name?>" readonly style="border: none;"> </td>
@@ -50,7 +56,8 @@
                     <td class="product-quantity"><input type="number" value="1" min="1" name="quantity"></td>
                     <td class="total-money"><input type="hidden" name="total_money" id="total-money-input" value=""></td>
 
-
+                    <input type="hidden" name="id_user"  value="<?=$id_user?>">
+                    <!-- <input type="hidden" name="order_date"  value="<?php $currentDateTime = date('Y-m-d H:i:s');?>"> -->
                 </tr>
                 
  </table>
