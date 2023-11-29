@@ -97,6 +97,7 @@
                         <input type="hidden" name="product_name" value="' . $product_name . '">
                         <input type="hidden" name="image" value="' . $image . '">
                         <input type="hidden" name="price" value="' . $price . '">
+                        <input type="hidden" name="price_sale" value="' . $price_sale . '">
                         <input type="submit" name="addtocart" value="Thêm giỏ hàng">
                     </form>
                     <a href="index.php?act=buy_now&id_product=' . $id_product . '" >Mua Ngay</a>
@@ -104,6 +105,7 @@
             }
             
             ?>
+            
             <!-- <button class="button-action-2">Mua ngay</button> -->
         </div>
     </div>
