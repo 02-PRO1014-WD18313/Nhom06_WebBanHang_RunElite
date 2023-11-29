@@ -133,125 +133,74 @@
           </div>
 
           <div class="product">
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
-
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
-
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
-
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
-
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
+          <?php
+                  foreach($spsale as $u){
+                    $priceDinhDang=number_format($u['price'],0,'.','.');
+                    $price_saleDingDang=number_format($u['price_sale'],0,'.','.');
+                    $linkspct = "index.php?act=product_detail&id_product=" . $u['id_product'];
+                    $hinh = $img_path . $u['image'];
+                    if ($u['view'] >= 20) {
+                        $love = "Yêu thích";
+                        $classLove = "product-sale";
+                    } else {
+                        $love = "";
+                        $classLove = "";
+                    }
+                    if ($u['price_sale'] != 0) {
+                        $salePercent = ceil((($u['price'] - $u['price_sale']) / $u['price']) * 100);
+                        echo '
+                        <div class="product-box">
+                            <div class="product-image-container">
+                                <img class="product-image" src="' . $hinh . '" alt="Tên sản phẩm">
+                                <div class="sale-number">
+                                    <img src="image/certificate-orange.png" alt="">
+                                    <p> Sale ' . $salePercent . '%</p>
+                                </div>
+                            </div>
+                            <div class="' . $classLove . '">' . $love . '</div>
+                            <div class="product-detail">
+                                <div class="product-title"><a href="' . $linkspct . '">' . $u['product_name'] . '</a></div>
+                                <div class="product-price"><del>' . $priceDinhDang . ' VNĐ</del> ' . $price_saleDingDang . 'VNĐ</div>
+                                <div class="buy-now"><a href="index.php?act=buy_now&id_product=' . $u['id_product'] . '">Mua Ngay</a></div>
+                                <div class="box-viewStar">
+                                    <div class="view-count">Lượt xem: ' . $u['view'] . '</div>
+                                    <div class="product-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                    } else {
+                        echo '
+                        <div class="product-box">
+                            <div class="product-image-container">
+                                <img class="product-image" src="' . $hinh . '" alt="Tên sản phẩm">
+                            </div>
+                            <div class="' . $classLove . '">' . $love . '</div>
+                            <div class="product-detail">
+                                <div class="product-title"><a href="' . $linkspct . '">' . $u['product_name'] . '</a></div>
+                                <div class="product-price"> ' . $priceDinhDang . 'VNĐ</div>
+                                <div class="buy-now"><a href="index.php?act=buy_now&id_product=' . $u['id_product'] . '">Mua Ngay</a></div>
+                                <div class="box-viewStar">
+                                    <div class="view-count">Lượt xem: ' . $u['view'] . '</div>
+                                    <div class="product-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                        
+                    }
+                  }
+            ?>
 
           </div>
           
@@ -261,127 +210,81 @@
 
         <!-- ADIDAS -->
         <div class="adidas">
-          <h1><a href="index.php?act=product_category&id_category=1">Giày Adidas</a> </h1>
+          <h1><a href="index.php?act=product_category&id_category=1">Sản Phẩm Mới </a> </h1>
           <div class="adidas-product">
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
 
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
+              <?php
+                  foreach($spmoi as $u){
+                    $priceDinhDang=number_format($u['price'],0,'.','.');
+                    $price_saleDingDang=number_format($u['price_sale'],0,'.','.');
+                    $linkspct = "index.php?act=product_detail&id_product=" . $u['id_product'];
+                    $hinh = $img_path . $u['image'];
+                    if ($u['view'] >= 20) {
+                        $love = "Yêu thích";
+                        $classLove = "product-sale";
+                    } else {
+                        $love = "";
+                        $classLove = "";
+                    }
+                    if ($u['price_sale'] != 0) {
+                        $salePercent = ceil((($u['price'] - $u['price_sale']) / $u['price']) * 100);
+                        echo '
+                        <div class="product-box">
+                            <div class="product-image-container">
+                                <img class="product-image" src="' . $hinh . '" alt="Tên sản phẩm">
+                                <div class="sale-number">
+                                    <img src="image/certificate-orange.png" alt="">
+                                    <p> Sale ' . $salePercent . '%</p>
+                                </div>
+                            </div>
+                            <div class="' . $classLove . '">' . $love . '</div>
+                            <div class="product-detail">
+                                <div class="product-title"><a href="' . $linkspct . '">' . $u['product_name'] . '</a></div>
+                                <div class="product-price"><del>' . $priceDinhDang . ' VNĐ</del> ' . $price_saleDingDang . 'VNĐ</div>
+                                <div class="buy-now"><a href="index.php?act=buy_now&id_product=' . $u['id_product'] . '">Mua Ngay</a></div>
+                                <div class="box-viewStar">
+                                    <div class="view-count">Lượt xem: ' . $u['view'] . '</div>
+                                    <div class="product-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                    } else {
+                        echo '
+                        <div class="product-box">
+                            <div class="product-image-container">
+                                <img class="product-image" src="' . $hinh . '" alt="Tên sản phẩm">
+                            </div>
+                            <div class="' . $classLove . '">' . $love . '</div>
+                            <div class="product-detail">
+                                <div class="product-title"><a href="' . $linkspct . '">' . $u['product_name'] . '</a></div>
+                                <div class="product-price"> ' . $priceDinhDang . 'VNĐ</div>
+                                <div class="buy-now"><a href="index.php?act=buy_now&id_product=' . $u['id_product'] . '">Mua Ngay</a></div>
+                                <div class="box-viewStar">
+                                    <div class="view-count">Lượt xem: ' . $u['view'] . '</div>
+                                    <div class="product-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                        
+                    }
+                  }
+              ?>
+              
 
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
 
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
-
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
+            
           </div>
         </div>
         <!-- END ADIDAS -->
@@ -393,127 +296,76 @@
 
         <!-- NIKE  -->
         <div class="adidas">
-          <h1><a href="index.php?act=product_category&id_category=2">Giày Nike</a></h1>
+          <h1><a href="index.php?act=product_category&id_category=2">Được xem nhiều nhất </a></h1>
           <div class="adidas-product">
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
-
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
-
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
-
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
-
-            <div class="product-box">
-              <div class="product-image-container">
-                  <img class="product-image" src="image/adidas_af1.jpg" alt="Tên sản phẩm">
-                  <a href=""> <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="product-sale">Yêu thích</div>
-              <div class="product-detail">
-                  <div class="product-title"><a href="">Giày Nike air force AF1 trắng vệt đen giày sneaker nam nữ</a></div>
-                  <div class="product-price">2.000.000 VND</div>
-                  <!-- <div class="remaining-products">Số lượng còn lại: 50</div> -->
-                  <div class="buy-now"><a href="">Mua Ngay</a></div>
-                  <div class="box-viewStar">
-                    <div class="view-count">Lượt xem: 1000</div>
-                    <div class="product-star">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                  </div>                          
-              </div>
-            </div>
+          <?php
+                  foreach($spview as $a){
+                    $priceDinhDang=number_format($a['price'],0,'.','.');
+                    $price_saleDingDang=number_format($a['price_sale'],0,'.','.');
+                    $linkspct = "index.php?act=product_detail&id_product=" . $a['id_product'];
+                    $hinh = $img_path . $a['image'];
+                    if ($a['view'] >= 20) {
+                        $love = "Yêu thích";
+                        $classLove = "product-sale";
+                    } else {
+                        $love = "";
+                        $classLove = "";
+                    }
+                    if ($a['price_sale'] != 0) {
+                        $salePercent = ceil((($a['price'] - $a['price_sale']) / $a['price']) * 100);
+                        echo '
+                        <div class="product-box">
+                            <div class="product-image-container">
+                                <img class="product-image" src="' . $hinh . '" alt="Tên sản phẩm">
+                                <div class="sale-number">
+                                    <img src="image/certificate-orange.png" alt="">
+                                    <p> Sale ' . $salePercent . '%</p>
+                                </div>
+                            </div>
+                            <div class="' . $classLove . '">' . $love . '</div>
+                            <div class="product-detail">
+                                <div class="product-title"><a href="' . $linkspct . '">' . $a['product_name'] . '</a></div>
+                                <div class="product-price"><del>' . $priceDinhDang . ' VNĐ</del> ' . $price_saleDingDang . 'VNĐ</div>
+                                <div class="buy-now"><a href="index.php?act=buy_now&id_product=' . $a['id_product'] . '">Mua Ngay</a></div>
+                                <div class="box-viewStar">
+                                    <div class="view-count">Lượt xem: ' . $a['view'] . '</div>
+                                    <div class="product-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                    } else {
+                        echo '
+                        <div class="product-box">
+                            <div class="product-image-container">
+                                <img class="product-image" src="' . $hinh . '" alt="Tên sản phẩm">
+                            </div>
+                            <div class="' . $classLove . '">' . $love . '</div>
+                            <div class="product-detail">
+                                <div class="product-title"><a href="' . $linkspct . '">' . $a['product_name'] . '</a></div>
+                                <div class="product-price"> ' . $priceDinhDang . 'VNĐ</div>
+                                <div class="buy-now"><a href="index.php?act=buy_now&id_product=' . $a['id_product'] . '">Mua Ngay</a></div>
+                                <div class="box-viewStar">
+                                    <div class="view-count">Lượt xem: ' . $a['view'] . '</div>
+                                    <div class="product-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+                        
+                    }
+                  }
+              ?>
           </div>
         </div>
 
