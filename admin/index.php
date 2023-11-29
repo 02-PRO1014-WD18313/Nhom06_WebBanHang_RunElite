@@ -5,7 +5,6 @@ include "../model/sanpham.php";
 include "../model/taikhoan.php";
 include "../model/dathang.php";
 
-
 include "header.php";
 $allCategory=loadall_danhmuc();
 
@@ -181,12 +180,36 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     include "donhang/update.php";
                     break;
                     case "updatedh":
-                        if(isset($_POST[' update_dh'])&&($_POST[' update_dh'])){
+                        if(isset($_POST['update_dh'])&&($_POST['update_dh'])){
 $name_order = $_POST['name_order'];
 $phone_order = $_POST['phone_order'];
+$address_order = $_POST['address_order'];
+$status=$_POST['status'];
+$id_order=$_POST['id_order'];
+update_donhang($name_order,$address_order,$phone_order,$status,$id_order);
+
 
                         }
+                    
+                        $listdh =loadall_donhang();
+            include "donhang/list.php";
                         break;
+                        case "xoadonhang":
+                            if (isset($_GET['id_order']) && ($_GET['id_order']) > 0) {
+                                $id = $_GET['id_order'];
+                                xoa_dh($id);
+                            }
+                            $listdh =loadall_donhang();
+                
+                            include "donhang/list.php";
+                            break;
+                            case "ctdonhang":
+                                if (isset($_GET['id_order']) && ($_GET['id_order']) > 0) {
+                                    $id = $_GET['id_order'];
+                                    $dh=loadone_donhang($id);
+                                }
+                                include "donhang/chitiet.php";
+                                break;
     }
     
         
