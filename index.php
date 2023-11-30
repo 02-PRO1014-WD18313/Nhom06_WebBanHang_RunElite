@@ -189,10 +189,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             break;
             case "follow_order":
-                if (isset($_GET['id_user']) && ($_GET['id_user'] > 0)){
-                    $id = $_GET['id_user'];
-                    // $dh = theodoi_donhang($id);
-                }
+              
                 include "view/follow_order.php";
                 break;
                 case "buycart":
