@@ -15,15 +15,9 @@ if (isset($_SESSION['user'])) {
 
 ?>
 
-<?php if((isset($dh))&&($dh!="")){
-echo '<h2 style="text-align: center;"> Theo Dõi Đơn Hàng</h2>';
-}else{
-    echo '<h2 style="text-align: center;">Cần Mua Hàng Để Theo Dõi</h2>';
-}?>
-
-
+ <h2 style="text-align: center;"> Theo Dõi Đơn Hàng</h2>;
 <table style="text-align: center; margin:auto">
-<?php    foreach($dh as $donhang):?>
+
         <thead>
             <th>ID Đơn Hàng</th>
             <th>Tên Người Nhận</th>
@@ -35,22 +29,31 @@ echo '<h2 style="text-align: center;"> Theo Dõi Đơn Hàng</h2>';
         </thead>
         <tbody>
         <tr>
-            
+        <?php    foreach($dh as $donhang):?>
                  <?php if ($donhang['status'] == "") {
                 $trangthai = "Chờ Xác Nhận";
             } else if ($donhang['status'] == "check") {
                  $trangthai = "Đã Xác Nhận";
           } else if ($donhang['status'] == "shipping") {
                    $trangthai = "Đang Vận chuyển";
-             } else {
+             } else if($donhang['status'] == "done"){
                  $trangthai = "Thành Công";
+              }else{
+                $trangthai = "Đã Hủy";
               }?>
+              <?php 
+              if($donhang['paymentMethod']=="cod"){
+                $pttt ="Thanh Toán Khi Nhận Hàng";
+              }else{
+                $pttt ="Thanh Toán Online";
+              }
+              ?>
                         <td><?=$donhang['id_order']?></td>
                         <td><?=$donhang['name_order']?></td>
                         <td><?=$donhang['product_name']?></td>
                         <td><?=$donhang['quantity']?></td>
                         <td><?=$donhang['total_money']?></td>
-                        <td><?=$donhang['paymentMethod']?></td>
+                        <td><?= $pttt ?></td>
                         <td><?=$trangthai?></td>
                         
                         
