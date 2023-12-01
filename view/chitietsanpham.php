@@ -2,6 +2,7 @@
     <div class="detail_product">
         <div class="detail_product_1">
             <?php
+            $binhluan = loadall_binhluan($_GET['id_product']);
             extract($product_detail);
             $img = $img_path . $image;
             echo '<div class="detail_product-image">
@@ -47,5 +48,49 @@
             ?>
             <!-- <button class="button-action-2">Mua ngay</button> -->
         </div>
+        
+        </div>
+
+        <!--  -->
+        <div class="mb">
+            <div class="box_title">BÌNH LUẬN</div>
+            <div class="box_content2  product_portfolio binhluan ">
+                <table>
+                    <?php foreach($binhluan as $value):
+
+                     ?>
+                       
+                    <tr>
+                        <td><?php echo $value['noidung']?></td>
+                        <td><?php echo date("d/m/Y", strtotime($value['date'])) ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+            </div>
+            
+            <div class="box_cmt">
+                <form action="index.php?act=product_detail&id_product=<?=$id_product?>" method="POST">
+                    <?php
+                   
+                        if(isset($_SESSION['user'])){
+
+                            echo '
+
+                                <input type="hidden" name="id_product" value="'.$id_product.'">
+                                <input type="text" name="noidung">
+                                <input type="submit" name="guibinhluan" value="Gửi bình luận">
+
+                                
+                           
+                            ';
+                        }else{
+                            echo '
+                                <input class="band" type="text" value="Đăng nhập để bình luận" readonly>
+                            ';
+                        }
+                    ?>                 
+                </form>
+            </div>
+    
     </div>
 </div>

@@ -41,7 +41,7 @@
           <a href="">My Order <i class="fa-regular fa-heart"></i></a>
         </li>
         <li>
-          <a href="index.php?act=addtocart"">My Cart <i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="index.php?act=addtocart">My Cart <i class="fa-solid fa-cart-shopping"></i></a>
         </li>
         <div class="menu2">
           <?php

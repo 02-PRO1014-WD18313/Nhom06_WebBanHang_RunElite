@@ -207,6 +207,7 @@ table thead tr{
 .table tbody tr.active{
   font-weight: bold;
   color: #4AD489;
+
 }
 .table tbody tr:last-of-type{
   border-bottom: 2px solid #4AD489;
@@ -408,4 +409,8 @@ a.google span{
   border: 2px solid red;
   width: 100px;
   height: 200px;
+}
+
+.cte{
+  margin-left: 20px;
 }

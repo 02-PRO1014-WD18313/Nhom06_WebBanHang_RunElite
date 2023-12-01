@@ -5,7 +5,7 @@ $suatk=loadone_taikhoan('id_user');
 ?>
 <div class="container-addProduct">
   <div class="addProduct-header">
-    <h1>Cập nhật tài Khoản </h1>
+    <h1>Cập nhật tài Khoản</h1>
   </div>
   <div class="">
     <?php

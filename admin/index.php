@@ -3,6 +3,8 @@ include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
+include "../model/binhluan.php";
+include "../model/thongke.php";
 include "header.php";
 $allCategory=loadall_danhmuc();
 
@@ -30,7 +32,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "sanpham/addsp.php";
             break;
-            
+            // thống kê
+        
+        case "thongke":
+            $listthongke = loadall_thongke();
+            include "thongke/list.php";
+            break;
+
         case "listsp":
             if(isset($_POST['listtimkiem'])&&($_POST['listtimkiem'])) {
                 $kyw=$_POST['kyw'];
@@ -52,6 +60,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listsp = loadall_sanpham();
             include "sanpham/listsp.php";
             break;
+            
         case "suasp":
             if (isset($_GET['id_product'])) {
                 $oneProduct = loadone_sanpham($_GET['id_product']);
@@ -59,6 +68,24 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "sanpham/update.php";
             break;
+
+
+            ////
+
+            case "dsbl":
+                $listbinhluan = loadall_binhluanadmin();
+                // print_r($listbinhluan);
+                include "binhluan/list.php";
+                break;
+
+            case "xoabl":
+                if (isset($_GET['id_binhluan'])) {
+                    delete_taikhoan($_GET['id_binhluan']);
+                }
+                $listbinhluan = loadall_binhluanadmin();
+                include "binhluan/list.php";
+                break;
+
 ////////////////////////////////
             case "xoatk":
                 if (isset($_GET['id_user'])) {
@@ -95,6 +122,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "taikhoan/list.php";
                     }
                     break;
+
         case "updatesp":
             if (isset($_POST['add_product']) && ($_POST['add_product'])) {
                 $id = $_POST['idsp'];
@@ -117,10 +145,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 }
             }
             break;
+
         case "listdm":
             $listdm = loadall_danhmuc();
             include "danhmuc/list.php";
-
             break;
 
             case "dskh":
@@ -136,6 +164,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "danhmuc/add.php";
             break;
+
         case "suadm":
             if (isset($_GET['id']) && ($_GET['id']) > 0) {
                 $sql = "select * from category where id_category=" . $_GET['id'];
@@ -144,6 +173,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             include "danhmuc/update.php";
             break;
+
         case "updatedm":
             if (isset($_POST['update_dm']) && ($_POST['update_dm'])) {
                 $tendm = $_POST['ten_dm'];
@@ -154,6 +184,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
+
         case "xoadm":
             if (isset($_GET['id']) && ($_GET['id']) > 0) {
                 $id = $_GET['id'];
@@ -162,6 +193,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
+
     }
 } else {
     include "danhmuc.php";
