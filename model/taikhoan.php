@@ -4,7 +4,7 @@
 // update_taikhoan($id_user, $tentk, $password, $gmail, $role);
 function update_taikhoan($id_user, $username, $password, $gmail, $phone, $role, $address )
 {
-   
+    
         $sql = "update user set id_user='" . $id_user . "', username='" . $username . "', password='" . $password . "'  ,
         gmail='" . $gmail . "', phone='" . $phone . "', role='" . $role . "', address='" . $address . "'
          where id_user=" . $id_user;
