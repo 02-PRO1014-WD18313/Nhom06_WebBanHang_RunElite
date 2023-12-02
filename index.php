@@ -56,15 +56,20 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'] != "")) {
                 $user = $_POST['username'];
                 $pass = $_POST['password'];
-                $login = dangnhap($user, $pass);
-                if (is_array($login)) {
-                    $_SESSION['user'] = $login;
-                    header('Location: index.php');
-                    $thongbao = '<script>alert("Đăng Nhập Thành Công")</script>';
-                } else {
-                    $thongbaoerr = '<i class="fas fa-exclamation-circle" style="color: #ff0000;margin-right:10px;"></i>Tài Khoản Hoặc Mật Khẩu Sai';
-                    // header('Location: index.php?act=dangnhap');
+                if($user!=""&&$pass!=""){
+                    $login = dangnhap($user, $pass);
+                    if (is_array($login)) {
+                        $_SESSION['user'] = $login;
+                        header('Location: index.php');
+                        
+                    } else {
+                        $thongbaoerr = '<i class="fas fa-exclamation-circle" style="color: #ff0000;margin-right:10px;"></i>Tài Khoản Hoặc Mật Khẩu Sai';
+                        // header('Location: index.php?act=dangnhap');
+                    }
+                }else{
+                    $thongbaoerr = '<i class="fas fa-exclamation-circle" style="color: #ff0000;margin-right:10px;"></i>Cần Nhập Tài Khoản Mật Khẩu';
                 }
+             
             }
             include "view/login.php";
             break;
