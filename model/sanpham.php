@@ -1,7 +1,7 @@
 <?php
-function insert_sanpham($tensp, $gia, $img, $mota, $iddm)
+function insert_sanpham($tensp, $gia,$giasale, $img, $mota, $iddm)
 {
-    $sql = "insert into product(product_name,price,image,mota,id_category) values ('$tensp','$gia','$img','$mota','$iddm')";
+    $sql = "insert into product(product_name,price,price_sale,image,mota,id_category) values ('$tensp','$gia','$giasale','$img','$mota','$iddm')";
     pdo_execute($sql);
 }
 function delete_sanpham($id)
@@ -40,14 +40,14 @@ function load_sanpham_cungloai($id, $iddm)
     $result = pdo_query($sql);
     return $result;
 }
-function update_sanpham($id, $iddm, $tensp, $giasp, $mota, $photo)
+function update_sanpham($id, $iddm, $tensp, $giasp,$giasale, $mota, $photo)
 {
     if ($photo != '') {
-        $sql = "update product set id_category='" . $iddm . "', product_name='" . $tensp . "', price='" . $giasp . "', mota='" . $mota . "',
-        image='" . $photo . "' where id_product=" . $id;
+        $sql = "update product set id_category='" . $iddm . "', product_name='" . $tensp . "', price='" . $giasp . "', price_sale='" . $giasale . "',
+         mota='" . $mota . "', image='" . $photo . "' where id_product=" . $id;
     } else {
-        $sql = "update product set id_category='" . $iddm . "', product_name='" . $tensp . "', price='" . $giasp . "', mota='" . $mota . "'
-         where id_product=" . $id;
+        $sql = "update product set id_category='" . $iddm . "', product_name='" . $tensp . "', price='" . $giasp . "', price_sale='" . $giasale . "',
+         mota='" . $mota . "'  where id_product=" . $id;
     }
 
     pdo_execute($sql);
@@ -61,4 +61,19 @@ function filter_price_product( $min,$max){
     $result=pdo_query($sql);
     return $result;
 
+}
+function load5sp_moi(){
+    $sql = "select * from product ORDER BY id_product desc limit 0,5";
+    $result = pdo_query($sql);
+    return $result;
+}
+function load5sp_view(){
+    $sql = "select * from product ORDER BY view desc limit 0,5";
+    $result = pdo_query($sql);
+    return $result;
+}
+function load5sp_sale(){
+    $sql = "select * from product WHERE price_sale > 0  ORDER BY price_sale asc limit 0,5";
+    $result = pdo_query($sql);
+    return $result;
 }

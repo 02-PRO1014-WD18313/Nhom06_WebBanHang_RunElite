@@ -137,7 +137,7 @@ border-radius: 0.5rem;
 .side-bar .logout a {
   color: #333; /* Màu chữ cho phần đăng xuất */
   display: block;
-  padding: 5px 30px;
+  /* padding: 5px 30px; */
   line-height: 60px;
   text-decoration: none;
 }
@@ -149,10 +149,7 @@ border-radius: 0.5rem;
   transition: 0.3s ease;
 
 }
-.side-bar .logout a:hover span{
-  font-size: 18px;
 
-}
 .side-bar .logout a:hover i{
   font-size: 30px;
 }
@@ -204,10 +201,16 @@ table thead tr{
 .table tbody tr:nth-of-type(odd){
   background: #f3f3f3;
 }
-.table tbody tr.active{
+.table>tbody>tr>.active{
   font-weight: bold;
   color: #4AD489;
 
+}
+.table>tbody>tr>.wait{
+  font-weight: bold;
+  background-color: yellow;
+  border-radius: 10px;
+  color:white;
 }
 .table tbody tr:last-of-type{
   border-bottom: 2px solid #4AD489;

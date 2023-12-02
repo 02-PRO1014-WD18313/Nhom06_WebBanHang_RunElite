@@ -22,7 +22,7 @@ $suatk=loadone_taikhoan('id_user');
 
         <div class="input-nameProduct">
           <label for="">Nhập tên tài khoản : </label>
-          <input type="text" name="tentk" value="<?=$username ?>">
+          <input type="text" name="tentk" value="<?=$username ?>" readonly>
         </div>
       </div>
 <br>

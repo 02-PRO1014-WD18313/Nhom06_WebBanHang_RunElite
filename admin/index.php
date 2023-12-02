@@ -3,8 +3,8 @@ include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
-include "../model/binhluan.php";
-include "../model/thongke.php";
+// include "../model/binhluan.php";
+// include "../model/thongke.php";
 include "header.php";
 $allCategory=loadall_danhmuc();
 
@@ -51,7 +51,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listsp=loadall_sanpham($kyw,$iddm);
             include "sanpham/listsp.php";
             break;
-
 
         case "xoasp":
             if (isset($_GET['id_product'])) {
