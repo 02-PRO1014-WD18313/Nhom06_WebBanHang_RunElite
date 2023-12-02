@@ -6,11 +6,15 @@ include "model/taikhoan.php";
 include "model/binhluan.php";
 include "model/sanpham.php";
 include "model/danhmuc.php";
+include "model/dathang.php";
 if (!isset($_SESSION['mycart'])) {
     $_SESSION['mycart'] = [];
 }
 $conn = pdo_get_connection();
 // $allProduct=load_all_product();
+$spmoi = load5sp_moi();
+$spview =load5sp_view();
+$spsale = load5sp_sale();
 $allCategory = loadall_danhmuc();
 $product_adidas = loadall_danhmuc("", 1);
 include "view/header.php";
@@ -118,17 +122,27 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
 
         case "addtocart":
-            if (isset($_POST['addtocart']) && ($_POST['addtocart'])) {
-                $id_product = $_POST['id_product'];
-                $product_name = $_POST['product_name'];
-                $image = $_POST['image'];
-                $price = $_POST['price'];
-                $soluong = 1;
-                $total_price = $soluong * $price;
-                $productadd = [$id_product, $product_name, $image, $price, $soluong, $total_price];
-                array_push($_SESSION['mycart'], $productadd);
+            if(isset($_SESSION['user'])){
+                if (isset($_POST['addtocart']) && ($_POST['addtocart'])) {
+                    $id_product = $_POST['id_product'];
+                    $product_name = $_POST['product_name'];
+                    $image = $_POST['image'];
+
+                    if(isset($_POST['price_sale']) && ($_POST['price_sale'] !=0)){    
+                        $price = $_POST['price_sale'];
+                    }else{
+                        $price = $_POST['price'];
+                    }
+
+                    $soluong = 1;
+                    $total_price = $soluong * $price;
+                    $productadd = [$id_product, $product_name, $image, $price, $soluong, $total_price];
+                    array_push($_SESSION['mycart'], $productadd);
+                }
+                include "view/cart/viewcart.php";
+            }else{
+                include "view/login.php";
             }
-            include "view/cart/viewcart.php";
             break;
         case "delete_cart":
             if (isset($_GET['idcart'])) {
@@ -139,6 +153,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             header('location: index.php?act=viewcart');
             break;
         case "viewcart":
+
             include "view/cart/viewcart.php";
             break;
         case "buy_now":
@@ -151,13 +166,39 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case "buy_now_result":
             if (isset($_POST['order_click']) && ($_POST['order_click'])) {
+                $name=$_POST['name_oder'];
+                $phone=$_POST['phone_oder'];
+                $address=$_POST['address_oder'];
+                $pay=$_POST['paymentMethod'];
+                $note=$_POST['note'];
+                $pr_name=$_POST['product-name'];
+                $product_price=$_POST['product-price'];
+                $quantity=$_POST['quantity'];
+                $totalMoney=$product_price * $quantity;
+                $id_user=$_POST['id_user'];
+                date_default_timezone_set('Asia/Ho_Chi_Minh');
+            $order_date=date('d/m/Y H:i:s');;
+            echo $order_date;
+                print_r($_POST);
+                if($pay=="online"){
+                    
+                   include "view/onlinepay.php";
+                }else{
+  insert_donhang($pr_name,$product_price, $quantity,$name, $phone,$address,$note, $pay,$totalMoney,$id_user,$order_date);
+
                 $thongbao = "Mua Hàng Thành Công";
                 include "view/buy_now_result.php";
+                }
+                // $product_img=$_POST['product-img'];
+              
             } else {
                 include "view/buy-now.php";
             }
 
             break;
+            case "return_pay":
+                include "view/return_pay.php";
+                break;
         case "filter-price":
             if (isset($_POST['search-pice']) && ($_POST['search-pice'])) {
                 $min=$_POST['price-min'];
@@ -174,6 +215,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "view/loadproduct2.php";
             }
             break;
+            case "follow_order":
+              
+                include "view/follow_order.php";
+                break;
+                case "buycart":
+                    include "view/cart/buycart.php";
+                    break;
     }
 } else {
     include "view/trangchu.php";
