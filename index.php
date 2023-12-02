@@ -115,10 +115,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 insert_binhluan($_POST['id_product'],$_SESSION['user']['id_user'], $_POST['noidung']);
             }
             if (isset($_GET['id_product']) && ($_GET['id_product'] > 0)) {
+                
                 $id = $_GET['id_product'];
                 $product_detail = loadone_sanpham($id);
                 update_view($id);
                 $binhluan = loadall_binhluan($_GET['id_product']);
+                $product_same = load_sanpham_cungloai($_GET['id_product'],$product_detail['id_category']);
                 include "view/chitietsanpham.php";
                 break;
             } else {
@@ -261,6 +263,7 @@ print_r($_POST);
                 case "buycart":
                     include "view/cart/buycart.php";
                     break;
+                    
     }
 } else {
     include "view/trangchu.php";
