@@ -52,8 +52,8 @@
                                         <td>' . $hinh . '</td>
                                         <td>' . $view . '</td>
 
-                                        <td><a  href="' . $suasp . '"><input  type="button" value="Sửa"> </a></td>
-                                        <td><a  href="' . $xoasp . '"><input  type="button" value="Xóa"></a></td>
+                                        <td><a  href="' . $suasp . '"><button class="button_action">Sửa</button> </a></td>
+                                        <td><a  href="' . $xoasp . '"><button class="button_action">Xóa</button></a></td>
                                       </tr>';
                     }
                     ?>

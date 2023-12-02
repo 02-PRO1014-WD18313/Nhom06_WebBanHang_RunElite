@@ -7,26 +7,22 @@
     <h1>Sửa Đơn Hàng</h1>
   </div>
   <div class="add-product">
-    <form action="index.php?act=updatedh" method="POST" >
-      <div class="price-product">
-        <div class="price-noSale">
-          <label for="">ID Đơn Hàng</label>
-          <input class="add-input" type="text" name="id" placeholder="Auto" disabled>
-        </div>
-
-        <div class="price-Sale">
+    <form class="form_update_order" action="index.php?act=updatedh" method="POST" >
+     
+        <div class="order-update-item">
           <label for="">Tên Người Đặt </label>
           <input class="add-input" type="Text" name="name_order" value="<?=$name_order?>">
         </div>
-      </div>
-      <div class="price-Sale">
+      
+      <div class="order-update-item">
           <label for="">Địa Chỉ: </label>
           <input class="add-input" type="Text" name="address_order" value="<?=$address_oder?>">
         </div>
-        <div class="price-Sale">
+        <div class="order-update-item">
           <label for="">Số điện Thoại:  </label>
           <input class="add-input" type="Text" name="phone_order" value="<?=$phone_oder?>">
         </div>
+        <div class="order-update-item">
         <label for="">Trạng Thái:  </label>
         <select name="status" id="">
             <option value="">Chờ Xác Nhận</option>
@@ -36,14 +32,16 @@
             <option value="cancel">Hủy</option>
             
         </select>
+        </div>
+       
       </div>
 
 
 
-      <div class="product-submit">
+      <div class="order-update-sumbit">
         <input type="hidden" name="id_order" value="<?=$id_order?>">
-        <input class="button" type="submit" name="update_dh" value="Cập Nhật">
-        <input class="button" type="reset" value="Nhập Lại">
+        <input class="button_order_update" type="submit" name="update_dh" value="Cập Nhật">
+        <input class="button_order_update" type="reset" value="Nhập Lại">
       </div>
       <span style="display:block;color:red;font-size:20px;margin-top:10px;">
         <?php

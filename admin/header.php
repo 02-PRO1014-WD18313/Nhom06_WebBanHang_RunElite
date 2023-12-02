@@ -6,6 +6,7 @@
   <title>Admin</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/addpro.css">
+  <link rel="stylesheet" href="../css/order.css">
   <!-- Font Awesome Cdn Link -->
   <link rel="stylesheet" href="../fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css">
 
@@ -34,8 +35,8 @@
           <a class="sub-btn"><i class="fa-solid fa-gift icon"></i>Sản Phẩm<i
               class="fa-solid fa-chevron-right dropdown"></i></a>
             <div class="sub-menu">
-              <a href="index.php?act=addsp" class="sub-item">Thêm sản phẩm</a>
-              <a href="index.php?act=listsp" class="sub-item">danh sách</a>
+              <a href="index.php?act=addsp" class="sub-item">Thêm Sản Phẩm</a>
+              <a href="index.php?act=listsp" class="sub-item">Danh Sách</a>
             </div>
         </div>
 

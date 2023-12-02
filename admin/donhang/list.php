@@ -5,21 +5,22 @@ $listdh = loadall_donhang();
     <section class="attendance">
         <div class="attendance-list">
             <h1 style="color: #0db5a3; font-size:30px;">Danh Sách Đơn Hàng</h1>
-            <table class="table">
+            <table class="table-order">
                 <thead>
                     <tr>
-                      <th>ID Đơn HÀNG</th>
-                        <th>Tên Sản Phẩm</th>
-                       <th>Tên Người Đặt</th>
+                    
+                        <th class="name_pro">Tên Sản Phẩm</th>
+                       <th class="name_order">Tên Người Đặt</th>
                         <!-- <th>Số Lượng</th>
                         
                         <th>Số Điện Thoại Người Đặt</th>
                         <th>Địa Chỉ</th>
                         <th>Ghi Chú</th> -->
                         <!-- <th>Phương Thức Thanh Toán</th> -->
-                        <th>Tổng Tiền</th>
-                        <th>Trạng Thái</th>
+                        <th class="total_money_admin">Tổng Tiền</th>
+                        <th class="status_admin">Trạng Thái</th>
                         <th colspan="2" style="text-align: center;">Action</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -31,25 +32,32 @@ $listdh = loadall_donhang();
                         $ctdh = "index.php?act=ctdonhang&id_order=" . $id_order;
                         // Thêm logic để xác định trạng thái
                         if ($status == "") {
-                            $trangthai = "Chờ Xác Nhận";
+                            $class = "wait";
+                            $trangthai = "Chờ Xác Nhận".'<i class="fa-solid fa-clock" style="color: #7f9c16;margin-left:3px;"></i>';
                         } else if ($status == "check") {
-                            $trangthai = "Đã Xác Nhận";
+                            $class = "check";
+                            $trangthai = "Đã Xác Nhận".'<i class="fa-solid fa-thumbs-up" style="color: #00f552;margin-left:3px;"></i>';
                         } else if ($status == "shipping") {
-                            $trangthai = "Đang Vận chuyển";
-                        } else {
-                            $trangthai = "Thành Công";
+                            $class="shipping";
+                            $trangthai = "Đang Vận chuyển".'<i class="fa-solid fa-truck-fast" style="color: #00ffe1;margin-left:3px;"></i>';
+                        } else if($status == "done"){
+                            $class = "done";
+                            $trangthai = "Thành Công".'<i class="fa-solid fa-circle-check" style="color: #00f01c;margin-left:3px;"></i>';
+                        }else{
+                            $class = "cancel";
+                            $trangthai = "Đã Hủy".'<i class="fa-solid fa-ban" style="color: #ff2424;margin-left:3px;"></i>';
                         }
 
                         echo '<tr>
-                        <td>' . $id_order. '</td>
-                                <td>' . $product_name . '</td>
+                        
+                                <td><a href="'.$ctdh.'">' . $product_name . '</a></td>
                                 <td>' . $name_order . '</td>
                                 <td>' . $total_money . '</td>
-                                <td class="' . $status . '">' . $trangthai . '</td>
-                                <td><a href="'.$ctdh.'"><input type="button" value="Chi Tiết Đơn Hàng"></a></td>
-                                <td><a href="' . $suadh . '"><input type="button" value="Sửa"></a>
-                                <hr>
-                                <a href="'.$xoadh.'"><input type="button" value="Xóa"></a></td>
+                                <td class="' . $class. '">' . $trangthai . '</td>
+                               
+                                <td><a href="' . $suadh . '"><button class="button_action">Sửa</button></a></td>
+                             
+                               <td> <a href="'.$xoadh.'"><button class="button_action">Xóa</button></td>
                             </tr>';
                     }
                     ?>

@@ -1,4 +1,5 @@
 .container-addProduct{
+    overflow: auto;
     width: 75%;
     background-color: #fff;
     margin: 30px auto;
