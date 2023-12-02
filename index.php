@@ -3,6 +3,7 @@ session_start();
 include "model/pdo.php";
 include "global.php";
 include "model/taikhoan.php";
+include "model/binhluan.php";
 include "model/sanpham.php";
 include "model/danhmuc.php";
 include "model/dathang.php";
@@ -67,6 +68,24 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "view/login.php";
             break;
+
+            case "sanphamct":
+                if(isset($_POST['guibinhluan'])){
+                    echo $_POST['id_product'];
+                    
+                    echo $_POST['noidung'];
+                    insert_binhluan($_POST['id_product'],$_SESSION['user']['id_user'], $_POST['noidung']);
+                }
+                if(isset($_GET['id_product']) && $_GET['id_product'] > 0){
+                    $sanpham = loadone_sanpham($_GET['id_product']);
+                    $sanphamct = load_sanpham_cungloai($_GET['id_product'], $sanpham['id_category']);
+                    $binhluan = loadall_binhluan($_GET['id_product']);
+                    include "view/chitietsanpham.php";
+                }else{
+                    include "view/home.php";            
+                }
+                break;
+                
         case "dangxuat":
 
             session_unset();
@@ -84,16 +103,24 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
             
         case "product_detail":
+            if(isset($_POST['guibinhluan'])){
+                // echo $_POST['id_product'];
+                
+                // echo $_POST['noidung'];
+                insert_binhluan($_POST['id_product'],$_SESSION['user']['id_user'], $_POST['noidung']);
+            }
             if (isset($_GET['id_product']) && ($_GET['id_product'] > 0)) {
                 $id = $_GET['id_product'];
                 $product_detail = loadone_sanpham($id);
                 update_view($id);
+                $binhluan = loadall_binhluan($_GET['id_product']);
                 include "view/chitietsanpham.php";
                 break;
             } else {
                 include "view/trangchu.php";
             }
             break;
+
         case "addtocart":
             if(isset($_SESSION['user'])){
                 if (isset($_POST['addtocart']) && ($_POST['addtocart'])) {

@@ -3,8 +3,8 @@ include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
-include "../model/dathang.php";
-
+include "../model/binhluan.php";
+include "../model/thongke.php";
 include "header.php";
 $allCategory=loadall_danhmuc();
 
@@ -16,7 +16,6 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id_category = $_POST['id_category'];
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
-                $giasale=$_POST['giasale'];
                 $mota = $_POST['mota'];
                 $photo = null;
                 if ($_FILES['image']['name'] != "") {
@@ -26,27 +25,32 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if ($tensp == "" || $giasp == '') {
                     $err = "Vui lòng không để trống !";
                 } else {
-                    insert_sanpham($tensp, $giasp,$giasale, $photo, $mota, $id_category);
+                    insert_sanpham($tensp, $giasp, $photo, $mota, $id_category);
                     $thongbao = "Thêm thành công sản phẩm!";
                 }
             }
             $listdm = loadall_danhmuc();
             include "sanpham/addsp.php";
             break;
-            
+            // thống kê
+        
+        case "thongke":
+            $listthongke = loadall_thongke();
+            include "thongke/list.php";
+            break;
+
         case "listsp":
             if(isset($_POST['listtimkiem'])&&($_POST['listtimkiem'])) {
                 $kyw=$_POST['kyw'];
                 $iddm=$_POST['iddm'];
             }else{
-                $kyw=null;
-                $iddm=null;
+                $kyw='';
+                $iddm=0;
             }
             $listdm = loadall_danhmuc();
             $listsp=loadall_sanpham($kyw,$iddm);
             include "sanpham/listsp.php";
             break;
-
 
         case "xoasp":
             if (isset($_GET['id_product'])) {
@@ -55,6 +59,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listsp = loadall_sanpham();
             include "sanpham/listsp.php";
             break;
+            
         case "suasp":
             if (isset($_GET['id_product'])) {
                 $oneProduct = loadone_sanpham($_GET['id_product']);
@@ -62,6 +67,24 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "sanpham/update.php";
             break;
+
+
+            ////
+
+            case "dsbl":
+                $listbinhluan = loadall_binhluanadmin();
+                // print_r($listbinhluan);
+                include "binhluan/list.php";
+                break;
+
+            case "xoabl":
+                if (isset($_GET['id_binhluan'])) {
+                    delete_taikhoan($_GET['id_binhluan']);
+                }
+                $listbinhluan = loadall_binhluanadmin();
+                include "binhluan/list.php";
+                break;
+
 ////////////////////////////////
             case "xoatk":
                 if (isset($_GET['id_user'])) {
@@ -98,13 +121,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "taikhoan/list.php";
                     }
                     break;
+
         case "updatesp":
             if (isset($_POST['add_product']) && ($_POST['add_product'])) {
                 $id = $_POST['idsp'];
                 $id_category = $_POST['id_category'];
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
-                $giasale=$_POST['giasale'];
                 $mota = $_POST['mota'];
                 $photo = null;
                 if ($_FILES['image']['name'] != "") {
@@ -114,18 +137,17 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if ($tensp == "" || $giasp == '') {
                     $err = "Vui lòng không để trống !";
                 } else {
-                    update_sanpham($id, $id_category, $tensp, $giasp, $giasale, $mota, $photo);
+                    update_sanpham($id, $id_category, $tensp, $giasp, $mota, $photo);
+                    $thongbao = "Thêm thành công sản phẩm!";
                     $listdm = loadall_danhmuc();
-                    $listsp=loadall_sanpham();
-
                     include "sanpham/listsp.php";
                 }
             }
             break;
+
         case "listdm":
             $listdm = loadall_danhmuc();
             include "danhmuc/list.php";
-
             break;
 
             case "dskh":
@@ -141,6 +163,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             include "danhmuc/add.php";
             break;
+
         case "suadm":
             if (isset($_GET['id']) && ($_GET['id']) > 0) {
                 $sql = "select * from category where id_category=" . $_GET['id'];
@@ -149,6 +172,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             include "danhmuc/update.php";
             break;
+
         case "updatedm":
             if (isset($_POST['update_dm']) && ($_POST['update_dm'])) {
                 $tendm = $_POST['ten_dm'];
@@ -159,6 +183,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
+
         case "xoadm":
             if (isset($_GET['id']) && ($_GET['id']) > 0) {
                 $id = $_GET['id'];
@@ -167,52 +192,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdm = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
-            case "listdh":
-                $listdh =loadall_donhang();
-                
-                include "donhang/list.php";
-                break;
-                case "suadonhang":
-                    if (isset($_GET['id_order']) && ($_GET['id_order']) > 0) {
-                        $sql = "select * from oder_detail where id_order=" . $_GET['id_order'];
-                        $dh= pdo_query_one($sql);
-                    }
-                    include "donhang/update.php";
-                    break;
-                    case "updatedh":
-                        if(isset($_POST['update_dh'])&&($_POST['update_dh'])){
-$name_order = $_POST['name_order'];
-$phone_order = $_POST['phone_order'];
-$address_order = $_POST['address_order'];
-$status=$_POST['status'];
-$id_order=$_POST['id_order'];
-update_donhang($name_order,$address_order,$phone_order,$status,$id_order);
 
-
-                        }
-                    
-                        $listdh =loadall_donhang();
-            include "donhang/list.php";
-                        break;
-                        case "xoadonhang":
-                            if (isset($_GET['id_order']) && ($_GET['id_order']) > 0) {
-                                $id = $_GET['id_order'];
-                                xoa_dh($id);
-                            }
-                            $listdh =loadall_donhang();
-                
-                            include "donhang/list.php";
-                            break;
-                            case "ctdonhang":
-                                if (isset($_GET['id_order']) && ($_GET['id_order']) > 0) {
-                                    $id = $_GET['id_order'];
-                                    $dh=loadone_donhang($id);
-                                }
-                                include "donhang/chitiet.php";
-                                break;
     }
-    
-        
 } else {
     include "danhmuc.php";
 }

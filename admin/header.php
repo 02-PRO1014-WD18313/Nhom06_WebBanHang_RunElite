@@ -50,11 +50,10 @@
 
         <!-- Đánh Giá -->
         <div class="item">
-          <a class="sub-btn"><i class="fas fa-star-half-alt icon"></i>Đánh Giá<i
+          <a class="sub-btn"><i class="fas fa-star-half-alt icon"></i>Bình luận<i
               class="fa-solid fa-chevron-right dropdown"></i></a>
             <div class="sub-menu">
-              <a href="#" class="sub-item">Sub Item 01</a>
-              <a href="#" class="sub-item">Sub Item 02</a>
+              <a href="index.php?act=dsbl" class="sub-item">bình luận</a>
             </div>
         </div>
 
@@ -73,8 +72,7 @@
           <a class="sub-btn"><i class="fa-solid fa-chart-simple icon"></i>Thống Kê<i
               class="fa-solid fa-chevron-right dropdown"></i></a>
             <div class="sub-menu">
-              <a href="#" class="sub-item">Sub Item 01</a>
-              <a href="#" class="sub-item">Sub Item 02</a>
+              <a href="index.php?act=thongke" class="sub-item">Danh sách</a>
             </div>
 
         </div>
