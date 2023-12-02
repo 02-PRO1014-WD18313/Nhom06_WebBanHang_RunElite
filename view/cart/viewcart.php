@@ -42,7 +42,11 @@
                     </tr>';
                 ?>
             </table>
+           
         </form>
+        <a href="index.php?act=buycart"><input class="button_order" type="submit"  value="Mua Hàng"></a>
+        
+     
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -81,5 +85,7 @@
                 quantityInput.dispatchEvent(new Event('input'));
             });
         });
+
+
     </script>
 </body>

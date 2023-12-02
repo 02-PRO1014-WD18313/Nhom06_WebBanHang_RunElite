@@ -6,7 +6,6 @@
 }else{
    
  header('Location: index.php?act=dangnhap');
- echo '<script>alert("Xin chào! Đây là cảnh báo.");</script>';
 } ?>
 
 <body>
@@ -57,7 +56,7 @@
                     <td class="total-money"><input type="hidden" name="total_money" id="total-money-input" value=""></td>
 
                     <input type="hidden" name="id_user"  value="<?=$id_user?>">
-                    <!-- <input type="hidden" name="order_date"  value="<?php $currentDateTime = date('Y-m-d H:i:s');?>"> -->
+                  
                 </tr>
                 
  </table>
@@ -98,9 +97,13 @@
 
             <!-- endpayment -->
 </div>
-            
-            <input class="button_order" type="submit" name="order_click" value="Đặt hàng" onclick="validateForm()">
+     <div>
+     <!-- <button class="button_order" name="order_click" onclick="validateForm()" type="submit"> Đặt hàng</button> -->
+     <input class="button_order" type="submit" name="order_click" value="Đặt hàng" onclick="validateForm()">
+     </div>       
+
         </form>
+       
     </div>
 </body>
 <script>

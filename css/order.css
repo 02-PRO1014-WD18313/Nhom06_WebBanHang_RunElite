@@ -1,0 +1,162 @@
+.main{
+    position: relative;
+    padding: 20px;
+    width: 100%;
+  }
+   .attendance{
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+  .attendance-list{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    height: 660px;
+    overflow: scroll;
+  
+  }
+  .table-order{
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 15px;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+  }
+  .table-order thead tr{
+    color: #fff;
+    background: #34AF6D;
+    text-align: left;
+    font-weight: bold;
+  }
+ 
+  .table-order .name_pro{
+    padding: 12px 15px;
+    width: 34%;
+  }
+  .name_order{
+    width: 15%;
+  }
+  .status_admin{
+    width: 15%;
+  }
+  .total_money_admin{
+    width: 10%;
+  }
+  .table-order tbody tr{
+    border-bottom: 1px solid #ddd;
+  }
+  .table-order tbody tr:nth-of-type(odd){
+    background: #f3f3f3;
+  }
+  .table-order>tbody>tr>td{
+    /* border: 1px solid blue; */
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    
+  }
+  .table-order>tbody>tr>.wait{
+    text-align: center;
+    font-weight: bold;
+    color:#7f9c16;
+  }
+  .table-order>tbody>tr>.check{
+    text-align: center;
+    font-weight: bold;
+
+    color:#00f552;
+  }
+  .table-order>tbody>tr>.shipping{
+    text-align: center;
+    font-weight: bold;
+    color: #00ffe1;
+  }  .table-order>tbody>tr>.done{
+    text-align: center;
+    font-weight: bold;
+ 
+    color:#00f01c;
+  }
+  .table-order>tbody>tr>.cancel{
+    text-align: center;
+    font-weight: bold;
+ 
+    color:#ff2424;
+  }
+  .table-order tbody tr:last-of-type{
+    border-bottom: 2px solid #4AD489;
+  }
+
+  .button_action{
+    border: 1px solid #4AD489;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 30px;
+    padding: 6px 20px;
+  }
+  .button_action:hover{
+    background: #4AD489;
+    color: #fff;
+    transition: 0.5rem;
+  }
+  /* form  */
+  .form_update_order{
+    padding: 10px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px 3px gray;
+    width: 50%;
+    /* height: 200px; */
+    margin: auto;
+  }.order-update-item{
+    /* border: 1px solid red; */
+    margin: 15px 20px 20px 5px;
+  }
+  .order-update-item label{
+    display: inline-block;
+    width: 30%;
+    font-weight: bold;
+  }
+  .order-update-item input{
+    font-size: 18px;
+    height: 29px;
+    margin-left: 10px;
+    width: 50%;
+  }.order-update-item>select{
+    height: 29px;
+    margin-left: 10px;
+    width: 50%;
+  }
+  .order-update-item textarea{
+    width: 100%;
+    
+  }  
+.order-update-sumbit {
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+  
+  .button_order_update {
+   
+    background: transparent;
+    border: 1px solid #4AD489;
+    border-radius: 18px;
+    width: 100px;
+    height: 50px;
+    margin: 0 25px; /* Khoảng cách 50px giữa hai nút */
+  }
+  .button_order_update:hover{
+    background: #4AD489;
+    color: #fff;
+    transition: 0.5rem;
+  }
