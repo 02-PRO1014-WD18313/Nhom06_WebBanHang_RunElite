@@ -56,15 +56,20 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'] != "")) {
                 $user = $_POST['username'];
                 $pass = $_POST['password'];
-                $login = dangnhap($user, $pass);
-                if (is_array($login)) {
-                    $_SESSION['user'] = $login;
-                    header('Location: index.php');
-                    $thongbao = '<script>alert("Đăng Nhập Thành Công")</script>';
-                } else {
-                    $thongbaoerr = '<i class="fas fa-exclamation-circle" style="color: #ff0000;margin-right:10px;"></i>Tài Khoản Hoặc Mật Khẩu Sai';
-                    // header('Location: index.php?act=dangnhap');
+                if($user!=""&&$pass!=""){
+                    $login = dangnhap($user, $pass);
+                    if (is_array($login)) {
+                        $_SESSION['user'] = $login;
+                        header('Location: index.php');
+                        
+                    } else {
+                        $thongbaoerr = '<i class="fas fa-exclamation-circle" style="color: #ff0000;margin-right:10px;"></i>Tài Khoản Hoặc Mật Khẩu Sai';
+                        // header('Location: index.php?act=dangnhap');
+                    }
+                }else{
+                    $thongbaoerr = '<i class="fas fa-exclamation-circle" style="color: #ff0000;margin-right:10px;"></i>Cần Nhập Tài Khoản Mật Khẩu';
                 }
+             
             }
             include "view/login.php";
             break;
@@ -110,10 +115,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 insert_binhluan($_POST['id_product'],$_SESSION['user']['id_user'], $_POST['noidung']);
             }
             if (isset($_GET['id_product']) && ($_GET['id_product'] > 0)) {
+                
                 $id = $_GET['id_product'];
                 $product_detail = loadone_sanpham($id);
                 update_view($id);
                 $binhluan = loadall_binhluan($_GET['id_product']);
+                $product_same = load_sanpham_cungloai($_GET['id_product'],$product_detail['id_category']);
                 include "view/chitietsanpham.php";
                 break;
             } else {
@@ -178,8 +185,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id_user=$_POST['id_user'];
                 date_default_timezone_set('Asia/Ho_Chi_Minh');
             $order_date=date('d/m/Y H:i:s');;
-            echo $order_date;
-                print_r($_POST);
+            // echo $order_date;
+                // print_r($_POST);
                 if($pay=="online"){
                     
                    include "view/onlinepay.php";
@@ -196,6 +203,40 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
 
             break;
+            case "buy_cart_result":
+                if (isset($_POST['order_click']) && ($_POST['order_click'])) {
+                 
+                    $name=$_POST['name_oder'];
+                    $phone=$_POST['phone_oder'];
+                    $address=$_POST['address_oder'];
+                    $pay=$_POST['paymentMethod'];
+                    $note=$_POST['note'];
+                    $pr_name=$_POST['product-name'];
+                    $product_price=$_POST['product-price'];
+                    $quantity=$_POST['quantity'];
+                    $totalMoney=$_POST['total_money'];
+                    $id_user=$_POST['id_user'];
+print_r($_POST);
+                    date_default_timezone_set('Asia/Ho_Chi_Minh');
+                $order_date=date('d/m/Y H:i:s');;
+                // echo $order_date;
+                    // print_r($_POST);
+    //                 if($pay=="online"){
+                        
+    //                    include "view/onlinepay.php";
+    //                 }else{
+    //   insert_donhang($pr_name,$product_price, $quantity,$name, $phone,$address,$note, $pay,$totalMoney,$id_user,$order_date);
+    
+    //                 $thongbao = "Mua Hàng Thành Công";
+    //                 include "view/buy_now_result.php";
+    //                 }
+                    // $product_img=$_POST['product-img'];
+                  
+                } else {
+                    include "view/buy-now.php";
+                }
+    
+                break;
             case "return_pay":
                 include "view/return_pay.php";
                 break;
@@ -222,6 +263,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 case "buycart":
                     include "view/cart/buycart.php";
                     break;
+                    
     }
 } else {
     include "view/trangchu.php";
