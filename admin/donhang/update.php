@@ -16,11 +16,11 @@
       
       <div class="order-update-item">
           <label for="">Địa Chỉ: </label>
-          <input class="add-input" type="Text" name="address_order" value="<?=$address_oder?>">
+          <input class="add-input" type="Text" name="address_order" value="<?=$address_order?>">
         </div>
         <div class="order-update-item">
           <label for="">Số điện Thoại:  </label>
-          <input class="add-input" type="Text" name="phone_order" value="<?=$phone_oder?>">
+          <input class="add-input" type="Text" name="phone_order" value="<?=$phone_order?>">
         </div>
         <div class="order-update-item">
         <label for="">Trạng Thái:  </label>
