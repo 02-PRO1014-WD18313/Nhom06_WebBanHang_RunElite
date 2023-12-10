@@ -8,6 +8,10 @@
             color: gray;
             font-size: 15px;
         }
+        .err{
+            color: red;
+            text-align: center;
+        }
     </style>
     <div class="detail_product">
         <div class="detail_product_1">
@@ -35,16 +39,7 @@
                         ' . $mota . '
                     </p>
                 </div>
-                <div class="size">
-                    Size : 
-                    <button class="product-size">40</button>
-                    <button class="product-size">41</button>
-                    <button class="product-size">42</button>
-                    <button class="product-size">43</button>
-                    <button class="product-size">44</button>
-                    <button class="product-size">45</button>
-    
-                </div>
+                
                 <div class="quantity">
                     Số Lượng :
                     <input type="number" min="1" value="1">
@@ -78,16 +73,6 @@
                         ' . $mota . '
                     </p>
                 </div>
-                <div class="size">
-                    Size : 
-                    <button class="product-size">40</button>
-                    <button class="product-size">41</button>
-                    <button class="product-size">42</button>
-                    <button class="product-size">43</button>
-                    <button class="product-size">44</button>
-                    <button class="product-size">45</button>
-    
-                </div>
                 <div class="quantity">
                     Số Lượng :
                     <input type="number" min="1" value="1">
@@ -114,19 +99,15 @@
 
     <!--  -->
     <div class="mb">
-        <div class="box_title">BÌNH LUẬN</div>
-        <div class="box_content2  product_portfolio binhluan ">
-            <table>
-                <?php foreach ($binhluan as $value) :
-
-                ?>
-
-                    <tr>
-                        <td><?php echo $value['noidung'] ?></td>
-                        <td><?php echo date("d/m/Y", strtotime($value['date'])) ?></td>
-                    </tr>
+        <div class="title_binhluan">Bình Luận</div>
+        <div class="load_binhluan">      
+                <?php foreach ($binhluan as $value) :?>
+                    <div class="load_bl2">
+                        <div class="load_bl2-1"><?= $_SESSION['user']['username']?></div>
+                        <div class="load_bl2-2"><?php echo $value['noidung'] ?></div>
+                        <div class="load_bl2-1"><?php echo date("d/m/Y", strtotime($value['date'])) ?></div>
+                    </div>
                 <?php endforeach; ?>
-            </table>
         </div>
 
         <div class="box_cmt">
@@ -149,7 +130,9 @@
                                 <input class="band" type="text" value="Đăng nhập để bình luận" readonly>
                             ';
                 }
+                
                 ?>
+                <div class="err"><?php echo isset($errCmt)?$errCmt:''; ?></div>
             </form>
         </div>
         <div class="adidas" style="width:1280px; margin: 20px auto;">

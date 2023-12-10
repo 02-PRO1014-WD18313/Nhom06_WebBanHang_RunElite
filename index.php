@@ -7,6 +7,7 @@ include "model/binhluan.php";
 include "model/sanpham.php";
 include "model/danhmuc.php";
 include "model/dathang.php";
+include "model/cart.php";
 if (!isset($_SESSION['mycart'])) {
     $_SESSION['mycart'] = [];
 }
@@ -109,10 +110,11 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             
         case "product_detail":
             if(isset($_POST['guibinhluan'])){
-                // echo $_POST['id_product'];
-                
-                // echo $_POST['noidung'];
-                insert_binhluan($_POST['id_product'],$_SESSION['user']['id_user'], $_POST['noidung']);
+                if($_POST['noidung'] != ''){
+                    insert_binhluan($_POST['id_product'],$_SESSION['user']['id_user'], $_POST['noidung']);
+                }else{
+                    $errCmt='Vui lòng không để trống !';
+                }
             }
             if (isset($_GET['id_product']) && ($_GET['id_product'] > 0)) {
                 
@@ -181,7 +183,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $pr_name=$_POST['product-name'];
                 $product_price=$_POST['product-price'];
                 $quantity=$_POST['quantity'];
-                $totalMoney=$product_price * $quantity;
+                $totalMoney=tongDonHang();
                 $id_user=$_POST['id_user'];
                 date_default_timezone_set('Asia/Ho_Chi_Minh');
             $order_date=date('d/m/Y H:i:s');;
@@ -205,34 +207,21 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
             case "buy_cart_result":
                 if (isset($_POST['order_click']) && ($_POST['order_click'])) {
-                 
                     $name=$_POST['name_oder'];
                     $phone=$_POST['phone_oder'];
                     $address=$_POST['address_oder'];
                     $pay=$_POST['paymentMethod'];
                     $note=$_POST['note'];
-                    $pr_name=$_POST['product-name'];
-                    $product_price=$_POST['product-price'];
-                    $quantity=$_POST['quantity'];
-                    $totalMoney=$_POST['total_money'];
-                    $id_user=$_POST['id_user'];
-print_r($_POST);
                     date_default_timezone_set('Asia/Ho_Chi_Minh');
-                $order_date=date('d/m/Y H:i:s');;
-                // echo $order_date;
-                    // print_r($_POST);
-    //                 if($pay=="online"){
-                        
-    //                    include "view/onlinepay.php";
-    //                 }else{
-    //   insert_donhang($pr_name,$product_price, $quantity,$name, $phone,$address,$note, $pay,$totalMoney,$id_user,$order_date);
-    
-    //                 $thongbao = "Mua Hàng Thành Công";
-    //                 include "view/buy_now_result.php";
-    //                 }
-                    // $product_img=$_POST['product-img'];
-                  
+                    $date=date('d/m/Y H:i:s');
+                    $tongDonHang=tongDonHang();
+                    foreach($_SESSION['mycart'] as $cart){              
+                        insert_donhang($cart[1],$cart[3], $cart[4],$name, $phone,$address,$note, $pay,$cart[5],$_SESSION['user']['id_user'], $date);
+                    }
+                    $thongbao = "Mua Hàng Thành Công";
+                    include "view/buy_now_result.php";
                 } else {
+                    
                     include "view/buy-now.php";
                 }
     

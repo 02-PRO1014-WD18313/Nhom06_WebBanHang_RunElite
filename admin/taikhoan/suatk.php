@@ -29,7 +29,7 @@ $suatk=loadone_taikhoan('id_user');
      
         <div class="order-update-item">
           <label for="">Nhập password :</label>
-          <input class="add-input" type="text" name="password" value="<?=$password?>">
+          <input class="add-input" type="password" name="password" value="<?=$password?>">
         </div>
        
         <div class="order-update-item">
