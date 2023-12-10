@@ -17,6 +17,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id_category = $_POST['id_category'];
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
+                $giasale = $_POST['giasale'];
                 $mota = $_POST['mota'];
                 $photo = null;
                 if ($_FILES['image']['name'] != "") {
@@ -26,7 +27,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if ($tensp == "" || $giasp == '') {
                     $err = "Vui lòng không để trống !";
                 } else {
-                    insert_sanpham($tensp, $giasp, $photo, $mota, $id_category);
+                    insert_sanpham($tensp, $giasp,$giasale, $photo, $mota, $id_category);
                     $thongbao = "Thêm thành công sản phẩm!";
                 }
             }
@@ -129,6 +130,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $id_category = $_POST['id_category'];
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
+                $giasale = $_POST['giasale'];
                 $mota = $_POST['mota'];
                 $photo = null;
                 if ($_FILES['image']['name'] != "") {
@@ -138,9 +140,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if ($tensp == "" || $giasp == '') {
                     $err = "Vui lòng không để trống !";
                 } else {
-                    update_sanpham($id, $id_category, $tensp, $giasp, $mota, $photo);
+                    update_sanpham($id, $id_category, $tensp, $giasp,$giasale, $mota, $photo);
                     $thongbao = "Thêm thành công sản phẩm!";
                     $listdm = loadall_danhmuc();
+                    $listsp=loadall_sanpham();
                     include "sanpham/listsp.php";
                 }
             }
