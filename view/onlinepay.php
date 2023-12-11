@@ -1,84 +1,83 @@
 <?php
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+$vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+$vnp_Returnurl = "http://localhost/Nhom06_WebBanHang_RunElite/index.php?act=return_pay";
+$vnp_TmnCode = "CJQLSZK0"; // Mã website tại VNPAY
+$vnp_HashSecret = "PQGKUSFGBQOLLFANZNVGCDLJYREUIXPI"; // Chuỗi bí mật
+$vnp_apiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
 
-// Your VNPAY merchant information
-$vnp_TmnCode = 'G710EQG6';
-$vnp_HashSecret = ' UXGVBMVJISBMJVOLSFDNXUMGDQZMVEFD';
-$vnp_Url = 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html';
+$startTime = date("YmdHis");
+$expire = date('YmdHis', strtotime('+15 minutes', strtotime($startTime)));
 
-// Get order information
-$orderInfo = "Description of your product/services";
-$amount = $totalMoney * 100; // VNPAY uses the amount in cents
+$vnp_TxnRef = time() . ''; // Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
+$vnp_OrderInfo = 'Thanh toán đơn hàng đặt tại web';
+$vnp_OrderType = 'billpayment';
+$vnp_Amount = $totalMoney * 100;
+$vnp_Locale = 'vn';
+$vnp_BankCode = 'NCB';
+$vnp_IpAddr = $_SERVER['REMOTE_ADDR'];
 
-// Build VNPAY payment URL
-$vnp_Params = array(
-    'vnp_Version' => '2.1.0',
-    'vnp_TmnCode' => $vnp_TmnCode,
-    'vnp_Amount' => $amount,
-    'vnp_Command' => 'pay',
-    'vnp_CreateDate' => date('YmdHis'),
-    'vnp_CurrCode' => 'VND',
-    'vnp_IpAddr' => $_SERVER['REMOTE_ADDR'],
-    'vnp_OrderInfo' => $orderInfo,
-    'vnp_ReturnUrl' => 'YOUR_RETURN_URL', // Replace with your return URL
-    'vnp_TxnRef' => date('YmdHis'),
-    'vnp_Locale' => 'vn',
-    'vnp_Currency' => 'VND',
+$vnp_ExpireDate = $expire;
+
+// Tạo mảng tham số
+$inputData = array(
+    "vnp_Version" => "2.1.0",
+    "vnp_TmnCode" => $vnp_TmnCode,
+    "vnp_Amount" => $vnp_Amount,
+    "vnp_Command" => "pay",
+    "vnp_CreateDate" => date('YmdHis'),
+    "vnp_CurrCode" => "VND",
+    "vnp_IpAddr" => $vnp_IpAddr,
+    "vnp_Locale" => $vnp_Locale,
+    "vnp_OrderInfo" => $vnp_OrderInfo,
+    "vnp_OrderType" => $vnp_OrderType,
+    "vnp_ReturnUrl" => $vnp_Returnurl,
+    "vnp_TxnRef" => $vnp_TxnRef,
+    "vnp_ExpireDate" => $vnp_ExpireDate
 );
-
-ksort($vnp_Params);
-
+if (isset($vnp_BankCode) && $vnp_BankCode != "") {
+    $inputData['vnp_BankCode'] = $vnp_BankCode;
+}
+// Sắp xếp mảng theo key để tạo chuỗi tham số
+ksort($inputData);
 $query = "";
 $i = 0;
 $hashdata = "";
-
-foreach ($vnp_Params as $key => $value) {
+foreach ($inputData as $key => $value) {
     if ($i == 1) {
-        $hashdata .= '&' . $key . "=" . $value;
+        $hashdata .= '&' . urlencode($key) . "=" . urlencode($value);
     } else {
-        $hashdata .= $key . "=" . $value;
+        $hashdata .= urlencode($key) . "=" . urlencode($value);
         $i = 1;
     }
     $query .= urlencode($key) . "=" . urlencode($value) . '&';
 }
 
-$vnp_Url .= "?" . $query;
-
-// Generate secure hash
-$vnp_HashSecret .= '&' . md5($hashdata);
-
-$vnpSecureHash = hash('sha256', $vnp_HashSecret);
-
-// Add secure hash to the VNPAY parameters
-$vnp_Params['vnp_SecureHashType'] = 'SHA256';
-$vnp_Params['vnp_SecureHash'] = $vnpSecureHash;
+$vnp_Url = $vnp_Url . "?" . $query;
+if (isset($vnp_HashSecret)) {
+    $vnpSecureHash = hash_hmac('sha512', $hashdata, $vnp_HashSecret);
+    $vnp_Url .= 'vnp_SecureHash=' . $vnpSecureHash;
+}
+$returnData = array(
+    'code' => '00',
+    'message' => 'success',
+    'data' => $vnp_Url
+);
+$returnData_succes = array(
+    'code' => '00',
+    'message' => 'success',
+    'data' => $vnp_Url,
+    'name='.$name
+);
+if (isset($_POST['order_click'])) {
+    header('Location: ' . $vnp_Url);
+  
+  
+    die();
+} else {
+    echo json_encode($returnData);
+}
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VNPAY Payment</title>
-</head>
-
-<body>
-    <h1>Redirecting to VNPAY for payment...</h1>
-    <p>Please wait, you are being redirected to the VNPAY payment gateway.</p>
-
-    <!-- Automatically submit the form to VNPAY -->
-    <form method="post" action="<?php echo $vnp_Url; ?>" id="vnpay-form">
-        <?php
-        foreach ($vnp_Params as $key => $value) {
-            echo '<input type="hidden" name="' . $key . '" value="' . $value . '" />';
-        }
-        ?>
-    </form>
-
-    <script>
-        document.getElementById('vnpay-form').submit();
-    </script>
-</body>
-
-</html>

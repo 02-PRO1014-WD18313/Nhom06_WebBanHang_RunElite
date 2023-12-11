@@ -1,6 +1,7 @@
 <?php  if(is_array($dh)){
     extract($dh);
     // print_r($dh);
+    
 }?>
 <div class="container-addProduct">
   <div class="addProduct-header">
@@ -25,6 +26,7 @@
         <div class="order-update-item">
         <label for="">Trạng Thái:  </label>
         <select name="status" id="">
+          <option selected></option>
             <option value="">Chờ Xác Nhận</option>
             <option value="check">Xác Nhận</option>
             <option value="shipping">Đang Vận Chuyển</option>

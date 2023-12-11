@@ -31,22 +31,28 @@ $listdh = loadall_donhang();
                         $xoadh = "index.php?act=xoadonhang&id_order=" . $id_order;
                         $ctdh = "index.php?act=ctdonhang&id_order=" . $id_order;
                         // Thêm logic để xác định trạng thái
-                        if ($status == "") {
-                            $class = "wait";
-                            $trangthai = "Chờ Xác Nhận".'<i class="fa-solid fa-clock" style="color: #7f9c16;margin-left:3px;"></i>';
-                        } else if ($status == "check") {
+                        if($paymentMethod=="online"){
                             $class = "check";
                             $trangthai = "Đã Xác Nhận".'<i class="fa-solid fa-thumbs-up" style="color: #00f552;margin-left:3px;"></i>';
-                        } else if ($status == "shipping") {
-                            $class="shipping";
-                            $trangthai = "Đang Vận chuyển".'<i class="fa-solid fa-truck-fast" style="color: #00ffe1;margin-left:3px;"></i>';
-                        } else if($status == "done"){
-                            $class = "done";
-                            $trangthai = "Thành Công".'<i class="fa-solid fa-circle-check" style="color: #00f01c;margin-left:3px;"></i>';
                         }else{
-                            $class = "cancel";
-                            $trangthai = "Đã Hủy".'<i class="fa-solid fa-ban" style="color: #ff2424;margin-left:3px;"></i>';
+                            if ($status == "") {
+                                $class = "wait";
+                                $trangthai = "Chờ Xác Nhận".'<i class="fa-solid fa-clock" style="color: #7f9c16;margin-left:3px;"></i>';
+                            } else if ($status == "check") {
+                                $class = "check";
+                                $trangthai = "Đã Xác Nhận".'<i class="fa-solid fa-thumbs-up" style="color: #00f552;margin-left:3px;"></i>';
+                            } else if ($status == "shipping") {
+                                $class="shipping";
+                                $trangthai = "Đang Vận chuyển".'<i class="fa-solid fa-truck-fast" style="color: #00ffe1;margin-left:3px;"></i>';
+                            } else if($status == "done"){
+                                $class = "done";
+                                $trangthai = "Thành Công".'<i class="fa-solid fa-circle-check" style="color: #00f01c;margin-left:3px;"></i>';
+                            }else if ($status == "cancel"){
+                                $class = "cancel";
+                                $trangthai = "Đã Hủy".'<i class="fa-solid fa-ban" style="color: #ff2424;margin-left:3px;"></i>';
+                            }
                         }
+                       
 
                         echo '<tr>
                         

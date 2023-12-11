@@ -18,6 +18,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
                 $mota = $_POST['mota'];
+                $giasale = $_POST['giasale'];
                 $photo = null;
                 if ($_FILES['image']['name'] != "") {
                     $photo = time() . "_" . $_FILES['image']['name'];
@@ -26,7 +27,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 if ($tensp == "" || $giasp == '') {
                     $err = "Vui lòng không để trống !";
                 } else {
-                    insert_sanpham($tensp, $giasp, $photo, $mota, $id_category);
+                    insert_sanpham($tensp, $giasp,$giasale, $photo, $mota, $id_category);
                     $thongbao = "Thêm thành công sản phẩm!";
                 }
             }

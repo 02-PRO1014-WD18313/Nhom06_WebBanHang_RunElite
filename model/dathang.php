@@ -4,6 +4,12 @@ $sql = "INSERT INTO oder_detail(product_name,product_price,quantity,name_order,p
  ('$product_name','$product_price','$quantity','$name','$phone','$address','$note','$pay','$totalMoney','$id_user',' $order_date');" ;
  pdo_execute($sql);
 }
+function insert_donhang_online($product_name,$product_price, $quantity,$name, $phone,$address,$note, $pay,$totalMoney,$id_user, $order_date){
+    $status="check";
+    $sql = "INSERT INTO oder_detail(product_name,product_price,quantity,name_order,phone_oder,address_oder,note,paymentMethod,total_money,id_user,order_date,status) VALUES
+     ('$product_name','$product_price','$quantity','$name','$phone','$address','$note','$pay','$totalMoney','$id_user',' $order_date',' $status');" ;
+     pdo_execute($sql);
+    }
 function loadall_donhang(){
     $sql = "select * from oder_detail where 1 order by id_order desc";
     $listdh=  pdo_query($sql);
@@ -27,5 +33,9 @@ function theodoi_donhang($id){
     $dh=  pdo_query($sql);
     return $dh;
    
+}
+function update_status($status,$id){
+    $sql="UPDATE order_detail SET status=$status WHERE id_order=$id ";
+    pdo_execute($sql);
 }
 ?>
