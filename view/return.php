@@ -1,11 +1,12 @@
 <?php
-include "view/buy_now_result.php";
+
 // Trong return.php
 if (isset($_GET['vnp_ResponseCode'])) {
     $vnp_ResponseCode = $_GET['vnp_ResponseCode'];
     
     // Xử lý kết quả thanh toán tại đây
     if ($vnp_ResponseCode == '00') {
+       
     //     $status="check";
     //     // Lấy dữ liệu từ URL
     //    update_status($status);
@@ -13,7 +14,14 @@ if (isset($_GET['vnp_ResponseCode'])) {
 
             // Hiển thị thông báo hoặc thực hiện các hành động khác
             // echo json_encode( $returnData_succes);
-            echo "Thanh toán thành công!";
+            echo '<div class="container-buy_now_result">
+            <div class="icon">
+                <i class="fa-solid fa-circle-check " style="color: #00ff04; font-size: 100px;"></i>
+            </div>
+            <div class="buy_now_result_content">
+        Đặt Hàng Thành Công, Chúng Tôi Sẽ Gọi Cho Bạn Để Xác Nhận Đơn Hàng .
+            </div>
+        </div>';
        
     } else {
         // Thanh toán thất bại

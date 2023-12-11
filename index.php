@@ -187,9 +187,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 // print_r($_POST);
                 if ($pay == "online") {
                     insert_donhang($pr_name, $product_price, $quantity, $name, $phone, $address, $note, $pay, $totalMoney, $id_user, $order_date);
-                    include "view/onlinepay.php";
-                  
                     
+                    include "view/onlinepay.php";
+                   
                 } else {
                     insert_donhang($pr_name, $product_price, $quantity, $name, $phone, $address, $note, $pay, $totalMoney, $id_user, $order_date);
 
@@ -212,18 +212,18 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $pay = $_POST['paymentMethod'];
                 $note = $_POST['note'];
                 $pr_name = $_POST['product-name'];
-                // $product_price = $_POST['product-price'];
+                $product_price = $_POST['product-price'];
                 $quantity = $_POST['quantity'];
-                // $totalMoney = $_POST['total_money'];
+                $totalMoney = $_POST['total_money'];
                 $id_user = $_POST['id_user'];
                 // print_r($_POST);
                 date_default_timezone_set('Asia/Ho_Chi_Minh');
-                $order_date = date('d/m/Y H:i:s'); 
+                $order_date = date('d/m/Y H:i:s');
                 // echo $order_date;
                 // print_r($_POST);
                 if ($pay == "online") {
                     insert_donhang($pr_name, $product_price, $quantity, $name, $phone, $address, $note, $pay, $totalMoney, $id_user, $order_date);
-                    // update_status($status,$id);
+
                        include "view/onlinepay.php";
                 }
                 // thanh toan offf 
